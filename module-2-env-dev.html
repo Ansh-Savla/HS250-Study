@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2 — Environment & Development | HS 250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,700;8..60,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" style="--progress: 0%"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand-link">
+      <span class="brand-mark">🌿</span>
+      <span>HS 250 Study Site</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cheat-sheet.html" class="nav-link">Cheat Sheet</a>
+      <a href="practice.html" class="nav-link">Practice MCQs</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </header>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <section class="hero reveal">
+        <div class="hero-meta">
+          <span class="pill pill-week">Module 02</span>
+          <span class="pill pill-module">History & Policy</span>
+          <span class="pill pill-type">Foundation</span>
+        </div>
+        <h1>Environment & Development: From Stockholm to Sustainable Development</h1>
+        <p class="hero-lead">Tracing the global evolution of environment-development thinking: Stockholm 1972, Brundtland 1987, and the tension between political reality and material reality.</p>
+
+        <div class="goals-panel">
+          <div class="goal-card"><strong>By the end</strong><p>Explain how UNCHE 1972 framed environment-development links and Indira Gandhi's poverty critique.</p></div>
+          <div class="goal-card"><strong>Define</strong><p>Sustainable Development per Brundtland and distinguish its two diagram interpretations.</p></div>
+          <div class="goal-card"><strong>Analyze</strong><p>Why SD is anthropocentric and how it challenges post-war growth assumptions.</p></div>
+          <div class="goal-card"><strong>Apply</strong><p>Use the Venn vs nested circles to diagnose policy tensions in any resource conflict.</p></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="unche-1972">
+        <div class="section-header"><span class="section-number">01</span><div class="section-title"><h2>UNCHE Stockholm 1972: The Poverty-Environment Link</h2><p class="section-subtitle">First global environment conference — pollution focus meets poverty reality</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>UNCHE (UN Conference on Human Environment), Stockholm 1972:</strong> First major UN environment conference. Dominated by pollution, deforestation, whaling. But Indira Gandhi famously asked: "Are not poverty and need the greatest polluters?" — reframing environmental degradation as a problem of inequality and survival, not just industrial pollution.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A factory polluting a river (industrial pollution) vs a villager cutting mangroves for firewood (poverty-driven). Both degrade environment, but causes and solutions differ entirely. Stockholm began recognizing this duality.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/stockholm-1972.html" title="Stockholm 1972: Dual Agenda" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 1: Stockholm's dual legacy — industrial pollution vs poverty-driven degradation</p>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Stockholm 1972 established the environment-development link: industrial pollution (Northern agenda) and poverty-driven degradation (Southern agenda) are two faces of the same ecological crisis."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> Thinking Gandhi meant "poor people are the problem." She meant poverty <em>forces</em> environmental degradation — the solution is ending poverty, not blaming the poor.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Explain Gandhi's quote in your own words</summary>
+            <div class="recall-content">
+              <p>"Are not poverty and need the greatest polluters?" means: When people lack alternatives, they must exploit nature to survive (cut forests for fuel, overfish, farm marginal lands). The degradation is a symptom of inequality, not the cause. Fix poverty → fix environment.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="brundtland-sd">
+        <div class="section-header"><span class="section-number">02</span><div class="section-title"><h2>Brundtland Report (1987): Defining Sustainable Development</h2><p class="section-subtitle">The definition that launched a thousand policies</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Brundtland Definition:</strong> "Sustainable development is development that meets the needs of the present without compromising the ability of future generations to meet their own needs."<br>
+            <strong>Key elements:</strong> Needs (especially poor's essential needs), Limits (technology/social organization), Future generations (intergenerational equity).
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A family living off a trust fund. Sustainable = spending only the interest, preserving principal for children. Unsustainable = eating the principal, leaving nothing for next generation.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/sd-diagrams.html" title="Two Diagrams of Sustainable Development" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 2: Two SD diagrams — Venn (political compromise) vs Nested (biophysical reality). The Venn suggests trade-offs; the Nested shows economy cannot exist without society, society cannot exist without environment.</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Diagnosing a Mining Conflict with the Two Diagrams</h4>
+            <ol>
+              <li><strong>Venn view (Political Reality):</strong> Mining company (Economy) wants access; community (Society) wants clean water; regulators seek "balance" in overlap zone. Compromise = smaller mine + compensation.</li>
+              <li><strong>Nested view (Material Reality):</strong> Mine destroys aquifer (Environment) → community loses water (Society) → economy collapses long-term. No compensation restores aquifer.</li>
+              <li><strong>Policy insight:</strong> Venn permits "offsets" (plant trees elsewhere); Nested says "no substitution for aquifer." Nested is stronger sustainability.</li>
+            </ol>
+          </div>
+
+          <div class="case-box">
+            <div class="case-title">Case: SD as Anthropocentric Concept</div>
+            <p>Brundtland SD is unashamedly anthropocentric — "needs of present/future generations" = human needs. Non-human nature has instrumental value only. Deep ecologists critique this: nature should have rights independent of human utility.</p>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "The Venn diagram represents political negotiation (what can we trade?); the Nested diagram represents biophysical law (what can we not trade?). Sustainable Development requires both — but Nested sets the floor."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> Confusing the two diagrams. Venn = three equal pillars with overlap (weak sustainability, substitutability). Nested = hierarchy, economy inside society inside environment (strong sustainability, non-substitutability).
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Draw both diagrams from memory and label the arrows</summary>
+            <div class="recall-content">
+              <p><strong>Venn:</strong> Three overlapping circles (Env, Soc, Econ). Left arrow: "Diverts attention from important questions." Right arrow: "Political Reality → SD."<br>
+              <strong>Nested:</strong> Three concentric circles (Env > Soc > Econ). Right arrow: "Material Reality."<br>
+              <strong>Key difference:</strong> Venn allows substitution (weak SD); Nested forbids it (strong SD).</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="sd-properties">
+        <div class="section-header"><span class="section-number">03</span><div class="section-title"><h2>Properties of Sustainable Development</h2><p class="section-subtitle">What SD is and isn't</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>SD combines:</strong> Environmental concerns + socio-economic issues.<br>
+            <strong>SD is:</strong> Anthropocentric (human needs centered).<br>
+            <strong>SD challenges:</strong> Post-war claim that prosperity = global trade + industry growth.<br>
+            <strong>Social justice + SD:</strong> Eradicate poverty, meet human needs, fair resource share.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> SD is like a household budget that must pay for food/rent (needs), save for kids' college (futurity), not max out credit cards (ecological limits), and ensure all family members get fair share (equity) — not just the breadwinner.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Property</th><th>Meaning</th><th>Implication</th></tr></thead>
+              <tbody>
+                <tr><td>Anthropocentric</td><td>Human needs centered</td><td>Nature valued instrumentally</td></tr>
+                <tr><td>Intergenerational equity</td><td>Future generations' needs = present</td><td>No discounting future to zero</td></tr>
+                <tr><td>Intragenerational equity</td><td>Fair share within present</td><td>Poverty eradication central</td></tr>
+                <tr><td>Biophysical limits</td><td>Economy ⊂ Society ⊂ Environment</td><td>Growth not infinite</td></tr>
+                <tr><td>Integration</td><td>Env + socio-economic together</td><td>No siloed policies</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "SD is not 'environment plus development' — it's the recognition that development that destroys its ecological base is not development at all."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Sustainable development" ≠ "sustainable growth." Growth = quantitative increase; Development = qualitative improvement. You can develop without growing (better distribution, efficiency), but you cannot grow indefinitely on a finite planet.
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="practice-m2">
+        <div class="section-header"><span class="section-number">🎯</span><div class="section-title"><h2>Module 2 Practice MCQs</h2></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question">1. The Brundtland definition of sustainable development contains two key concepts. Which pair is correct?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m2q1" value="incorrect">"Economic growth" and "environmental protection"</label>
+              <label class="mcq-option"><input type="radio" name="m2q1" value="correct">"Needs of the present" and "ability of future generations"</label>
+              <label class="mcq-option"><input type="radio" name="m2q1" value="incorrect">"Resource efficiency" and "pollution control"</label>
+              <label class="mcq-option"><input type="radio" name="m2q1" value="incorrect">"GDP growth" and "social equity"</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Verbatim from Brundtland: 'development that meets the needs of the present without compromising the ability of future generations to meet their own needs.' The two pillars are present needs and future generations' ability."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>"Needs of the present" and "ability of future generations"</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question">2. In the Venn diagram of SD (three overlapping circles), what does the right arrow labeled "Political Reality → SD" represent?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m2q2" value="incorrect">Biophysical limits determining policy</label>
+              <label class="mcq-option"><input type="radio" name="m2q2" value="correct">Political compromise and trade-offs shaping SD implementation</label>
+              <label class="mcq-option"><input type="radio" name="m2q2" value="incorrect">Scientific consensus driving policy</label>
+              <label class="mcq-option"><input type="radio" name="m2q2" value="incorrect">Market forces aligning three pillars</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="The Venn diagram represents weak sustainability where pillars are substitutable. The right arrow shows political negotiation — what's politically feasible becomes SD, often diverting attention from hard biophysical questions (left arrow)."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Political compromise and trade-offs shaping SD implementation</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question">3. The Nested Circles diagram (Environment > Society > Economy) implies which sustainability principle?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m2q3" value="incorrect">Weak sustainability — capital is substitutable</label>
+              <label class="mcq-option"><input type="radio" name="m2q3" value="correct">Strong sustainability — economy cannot exist without society, society without environment</label>
+              <label class="mcq-option"><input type="radio" name="m2q3" value="incorrect">Economic growth can continue indefinitely with tech innovation</label>
+              <label class="mcq-option"><input type="radio" name="m2q3" value="incorrect">Environmental protection is a luxury for rich countries</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Nested circles = hierarchy of dependence. Economy is subset of society, society subset of environment. No substitution possible for environment — this is strong sustainability. Material reality arrow confirms biophysical primacy."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Strong sustainability — economy cannot exist without society, society without environment</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question">4. Which statement about Sustainable Development is FALSE?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m2q4" value="incorrect">SD is anthropocentric (human-needs centered)</label>
+              <label class="mcq-option"><input type="radio" name="m2q4" value="incorrect">SD integrates environmental and socio-economic concerns</label>
+              <label class="mcq-option"><input type="radio" name="m2q4" value="correct">SD assumes unlimited economic growth is possible with technology</label>
+              <label class="mcq-option"><input type="radio" name="m2q4" value="incorrect">SD challenges post-war prosperity-through-trade claims</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="SD explicitly recognizes biophysical limits (Nested diagram) and questions the post-war claim that prosperity = endless trade/industry growth. It does not assume unlimited growth is possible."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>SD assumes unlimited economic growth is possible with technology</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question">5. Indira Gandhi's question at Stockholm 1972 — "Are not poverty and need the greatest polluters?" — reflects which perspective?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m2q5" value="incorrect">Deep ecology (nature has intrinsic rights)</label>
+              <label class="mcq-option"><input type="radio" name="m2q5" value="incorrect">Industrial pollution control</label>
+              <label class="mcq-option"><input type="radio" name="m2q5" value="correct">Environmentalism of the Poor (poverty forces environmental degradation)</label>
+              <label class="mcq-option"><input type="radio" name="m2q5" value="incorrect">Technological optimism</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Gandhi's quote founded the 'Environmentalism of the Poor' school (Anil Agarwal, Ramachandra Guha): poverty forces people to degrade environment for survival; the solution is justice and development, not blaming the poor."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Environmentalism of the Poor (poverty forces environmental degradation)</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="anchor-rail" aria-label="On-page navigation">
+      <h4>Module 02</h4>
+      <a href="#unche-1972" class="anchor-link">01 UNCHE 1972</a>
+      <a href="#brundtland-sd" class="anchor-link">02 Brundtland & SD Diagrams</a>
+      <a href="#sd-properties" class="anchor-link">03 SD Properties</a>
+      <a href="#practice-m2" class="anchor-link">🎯 Practice MCQs</a>
+      <h4>Navigation</h4>
+      <a href="index.html" class="anchor-link">← Home</a>
+      <a href="module-1-sociology.html" class="anchor-link">← Prev: Module 01</a>
+      <a href="module-3-sustainability.html" class="anchor-link">Next: Module 03 →</a>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>HS 250 — Module 02: Environment & Development · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

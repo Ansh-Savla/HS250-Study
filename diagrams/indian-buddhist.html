@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian & Buddhist Environmental Philosophy</title>
+<style>
+  :root {
+    --text-primary: #1a1a18;
+    --text-secondary: #5f5e5a;
+    --text-tertiary: #88877f;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f5f0;
+    --bg-tertiary: #eeedeb;
+    --border: rgba(0,0,0,0.15);
+    --border-hover: rgba(0,0,0,0.3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #e8e6de;
+      --text-secondary: #b4b2a9;
+      --text-tertiary: #888780;
+      --bg-primary: #1a1a18;
+      --bg-secondary: #2c2c2a;
+      --bg-tertiary: #3d3d3a;
+      --border: rgba(255,255,255,0.15);
+      --border-hover: rgba(255,255,255,0.3);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-tertiary); display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; }
+  .card { background: var(--bg-primary); border-radius: 16px; padding: 32px; max-width: 780px; width: 100%; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  h1 { font-size: 18px; font-weight: 500; color: var(--text-primary); margin-bottom: 8px; }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; }
+  svg { width: 100%; height: auto; }
+
+  .t  { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); }
+  .ts { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; fill: var(--text-secondary); }
+  .th { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); font-weight: 500; }
+  .box { fill: var(--bg-secondary); stroke: var(--border); stroke-width: 0.5px; }
+  .arr { stroke: var(--text-secondary); stroke-width: 1.5px; fill: none; }
+  .leader { stroke: var(--text-tertiary); stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
+  .node { cursor: pointer; transition: opacity 0.15s; }
+  .node:hover { opacity: 0.82; }
+
+  .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #E1F5EE; stroke: #0F6E56; }
+  .c-teal > .th, .c-teal > text.th { fill: #085041; }
+  .c-teal > .ts, .c-teal > text.ts { fill: #0F6E56; }
+  .c-teal > .t,  .c-teal > text.t  { fill: #085041; }
+
+  .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #FAEEDA; stroke: #854F0B; }
+  .c-amber > .th, .c-amber > text.th { fill: #633806; }
+  .c-amber > .ts, .c-amber > text.ts { fill: #854F0B; }
+  .c-amber > .t,  .c-amber > text.t  { fill: #633806; }
+
+  .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #FAECE7; stroke: #993C1D; }
+  .c-coral > .th, .c-coral > text.th { fill: #712B13; }
+  .c-coral > .ts, .c-coral > text.ts { fill: #993C1D; }
+  .c-coral > .t,  .c-coral > text.t  { fill: #712B13; }
+
+  .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #FBEAF0; stroke: #993556; }
+  .c-pink > .th, .c-pink > text.th { fill: #72243E; }
+  .c-pink > .ts, .c-pink > text.ts { fill: #993556; }
+  .c-pink > .t,  .c-pink > text.t  { fill: #72243E; }
+
+  .c-purple > rect, .c-purple > circle, .c-purple > ellipse { fill: #EEEDFE; stroke: #534AB7; }
+  .c-purple > .th, .c-purple > text.th { fill: #3C3489; }
+  .c-purple > .ts, .c-purple > text.ts { fill: #534AB7; }
+  .c-purple > .t,  .c-purple > text.t  { fill: #3C3489; }
+
+  .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #FBEAF0; stroke: #993556; }
+  .c-pink > .th, .c-pink > text.th { fill: #72243E; }
+  .c-pink > .ts, .c-pink > text.ts { fill: #993556; }
+  .c-pink > .t,  .c-pink > text.t  { fill: #72243E; }
+
+  @media (prefers-color-scheme: dark) {
+    .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #085041; stroke: #5DCAA5; }
+    .c-teal > .th, .c-teal > text.th { fill: #9FE1CB; }
+    .c-teal > .ts, .c-teal > text.ts { fill: #5DCAA5; }
+
+    .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #633806; stroke: #EF9F27; }
+    .c-amber > .th, .c-amber > text.th { fill: #FAC775; }
+    .c-amber > .ts, .c-amber > text.ts { fill: #EF9F27; }
+
+    .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #712B13; stroke: #F0997B; }
+    .c-coral > .th, .c-coral > text.th { fill: #F5C4B3; }
+    .c-coral > .ts, .c-coral > text.ts { fill: #F0997B; }
+
+    .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #72243E; stroke: #ED93B1; }
+    .c-pink > .th, .c-pink > text.th { fill: #F4C0D1; }
+    .c-pink > .ts, .c-pink > text.ts { fill: #ED93B1; }
+
+    .c-purple > rect, .c-purple > circle, .c-purple > ellipse { fill: #3C3489; stroke: #AFA9EC; }
+    .c-purple > .th, .c-purple > text.th { fill: #CECBF6; }
+    .c-purple > .ts, .c-purple > text.ts { fill: #AFA9EC; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Indian & Buddhist Environmental Philosophy</h1>
+  <p class="subtitle">Realist/Idealist, sentience, Buddhist dependent origination, Panchsheel</p>
+  <svg width="100%" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+
+    <!-- Indian Approaches -->
+    <text class="th" x="340" y="40" text-anchor="middle">Indian Approaches: Realist vs Idealist</text>
+    <g class="node c-teal">
+      <rect x="40" y="60" width="280" height="120" rx="8" stroke-width="0.5"/>
+      <text class="th" x="180" y="85" text-anchor="middle" dominant-baseline="central">Realist</text>
+      <text class="ts" x="180" y="110" text-anchor="middle" dominant-baseline="central">Perceived objects exist</text>
+      <text class="ts" x="180" y="128" text-anchor="middle" dominant-baseline="central">independent of consciousness</text>
+      <text class="ts" x="180" y="146" text-anchor="middle" dominant-baseline="central">Nyaya-Vaisheshika, Mimamsa</text>
+    </g>
+
+    <g class="node c-amber">
+      <rect x="360" y="60" width="280" height="120" rx="8" stroke-width="0.5"/>
+      <text class="th" x="500" y="85" text-anchor="middle" dominant-baseline="central">Idealist</text>
+      <text class="ts" x="500" y="110" text-anchor="middle" dominant-baseline="central">Object aware of itself?</text>
+      <text class="ts" x="500" y="128" text-anchor="middle" dominant-baseline="central">Consciousness constitutes reality</text>
+      <text class="ts" x="500" y="146" text-anchor="middle" dominant-baseline="central">Advaita Vedanta, Yogacara</text>
+    </g>
+
+    <!-- Nature's Sentience -->
+    <text class="th" x="340" y="210" text-anchor="middle">Is Nature Sentient? The Ethical Question</text>
+    <g class="c-purple">
+      <text class="ts" x="80" y="235" dominant-baseline="central">• Realist: objects exist, but are they conscious?</text>
+      <text class="ts" x="80" y="255" dominant-baseline="central">• Some argue Earth as conscious as humans</text>
+      <text class="ts" x="80" y="275" dominant-baseline="central">• Others: Earth = indirect cause of sentience, not conscious itself</text>
+      <text class="ts" x="80" y="295" dominant-baseline="central">• Ethics: Should I behave with Earth as conscious being?</text>
+      <text class="ts" x="80" y="315" dominant-baseline="central">• Shared responsibility of not hurting nature</text>
+    </g>
+
+    <!-- Buddhist Philosophy -->
+    <text class="th" x="340" y="345" text-anchor="middle">Buddhist Philosophy</text>
+
+    <!-- Three Jewels -->
+    <g class="node c-pink">
+      <rect x="40" y="360" width="200" height="160" rx="8" stroke-width="0.5"/>
+      <text class="th" x="140" y="385" text-anchor="middle" dominant-baseline="central">3 Jewels of Buddhism</text>
+      <text class="ts" x="140" y="410" text-anchor="middle" dominant-baseline="central">Buddha → teaches the truth</text>
+      <text class="ts" x="140" y="430" text-anchor="middle" dominant-baseline="central">Dharma → truth of all teachings</text>
+      <text class="ts" x="140" y="450" text-anchor="middle" dominant-baseline="central">Sangha → community of all beings</text>
+      <text class="ts" x="140" y="470" text-anchor="middle" dominant-baseline="central">Bodhisattva: vow to save all beings</text>
+    </g>
+
+    <!-- Core doctrines -->
+    <g class="node c-teal">
+      <rect x="260" y="360" width="200" height="160" rx="8" stroke-width="0.5"/>
+      <text class="th" x="360" y="385" text-anchor="middle" dominant-baseline="central">Core Doctrines</text>
+      <text class="ts" x="360" y="410" text-anchor="middle" dominant-baseline="central">Experiential knowing</text>
+      <text class="ts" x="360" y="430" text-anchor="middle" dominant-baseline="central">Verify truth yourself</text>
+      <text class="ts" x="360" y="450" text-anchor="middle" dominant-baseline="central">Impermanence (anicca)</text>
+      <text class="ts" x="360" y="470" text-anchor="middle" dominant-baseline="central">Dependent origination</text>
+      <text class="ts" x="360" y="490" text-anchor="middle" dominant-baseline="central">Universe = mutual web</text>
+    </g>
+
+    <!-- Panchsheel -->
+    <g class="node c-amber">
+      <rect x="480" y="360" width="180" height="160" rx="8" stroke-width="0.5"/>
+      <text class="th" x="570" y="385" text-anchor="middle" dominant-baseline="central">Panchsheel (5 Precepts)</text>
+      <text class="ts" x="570" y="410" text-anchor="middle" dominant-baseline="central">1. Not to kill</text>
+      <text class="ts" x="570" y="430" text-anchor="middle" dominant-baseline="central">2. Not to lie</text>
+      <text class="ts" x="570" y="450" text-anchor="middle" dominant-baseline="central">3. Not to steal</text>
+      <text class="ts" x="570" y="470" text-anchor="middle" dominant-baseline="central">4. Not to abuse sexually</text>
+      <text class="ts" x="570" y="490" text-anchor="middle" dominant-baseline="central">5. No intoxication/drugs</text>
+    </g>
+
+    <!-- Dependent Origination & Oneness -->
+    <text class="th" x="340" y="540" text-anchor="middle">Dependent Origination: Not Oneness, But Interconnected Differences</text>
+    <g class="c-purple">
+      <text class="ts" x="80" y="565" dominant-baseline="central">→ No ontology of "the One" (unlike Advaita/Monism)</text>
+      <text class="ts" x="80" y="585" dominant-baseline="central">→ View of differences & multiplicities with interconnectedness</text>
+      <text class="ts" x="80" y="605" dominant-baseline="central">→ Pratītyasamutpāda: universe = mutual web of relationships</text>
+      <text class="ts" x="80" y="625" dominant-baseline="central">→ Impermanence + interdependence = ecological worldview</text>
+    </g>
+
+  </svg>
+</div>
+</body>
+</html>

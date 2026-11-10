@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 8 — Environmental Policy Instruments | HS 250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" style="--progress: 0%"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand-link">
+      <span class="brand-mark">🌿</span>
+      <span>HS 250 Study Site</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cheat-sheet.html" class="nav-link">Cheat Sheet</a>
+      <a href="practice.html" class="nav-link">Practice MCQs</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </header>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <section class="hero reveal">
+        <div class="hero-meta">
+          <span class="pill pill-week">Module 08</span>
+          <span class="pill pill-module">Policy/Economics</span>
+          <span class="pill pill-type">Instruments</span>
+        </div>
+        <h1>Environmental Policy Instruments: Detailed Analysis</h1>
+        <p class="hero-lead">Deep dive into CAC, market-based instruments, Coase theorem, polluter pays, and selection criteria with the SO₂ allowance case study.</p>
+
+        <div class="goals-panel">
+          <div class="goal-card"><strong>By the end</strong><p>Compare CAC, taxes, permits across 7 criteria: efficiency, goal fulfillment, admin, politics.</p></div>
+          <div class="goal-card"><strong>Apply</strong><p>Coase theorem, polluter pays principle, and internalizing externalities.</p></div>
+          <div class="goal-card"><strong>Analyze</strong><p>SO₂ allowance trading: why it worked, design features, lessons for carbon markets.</p></div>
+          <div class="goal-card"><strong>Evaluate</strong><p>Instrument selection framework: static/dynamic efficiency, goal fulfillment, admin, barriers, politics.</p></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="cac-market">
+        <div class="section-header"><span class="section-number">01</span><div class="section-title"><h2>CAC vs Market-Based Instruments</h2><p class="section-subtitle">Command-and-control vs price/quantity instruments</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>CAC (Command & Control):</strong> Standards (MINAS, product/process), Bans, Permits/quotas/licenses.<br>
+            <strong>Market-based (Using Markets):</strong> Charge systems (effluent, user, product, admin, impact fees), Fiscal/Environmental taxes (pollution, input, tech subsidies), Financial instruments (subsidies, soft loans, grants).<br>
+            <strong>Market-based (Creating Markets):</strong> Property rights/decentralization, Tradable permits/rights, International offsets, Liability insurance.<br>
+            <strong>Participation:</strong> Voluntary agreements, public participation, info disclosure (color labels), two-tier monitoring.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> CAC = teacher assigns seats (command). Taxes = pay per disruption (price). Permits = limited talking tokens (quantity). Participation = class meeting to decide rules.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/policy-instruments.html" title="Policy Instruments Overview" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 1: Full policy instrument taxonomy — CAC, market-based, participation</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Industrial Effluent Control</h4>
+            <ol>
+              <li><strong>CAC:</strong> MINAS standard — all firms must meet same effluent concentration</li>
+              <li><strong>Effluent charge:</strong> Pay ₹/kg of BOD discharged → firms with low abatement cost reduce more</li>
+              <li><strong>Tradable permits:</strong> Total BOD cap allocated; firms trade → low-cost reducers sell to high-cost</li>
+              <li><strong>Outcome:</strong> CAC = uniform but costly; Charge = cost-effective; Permits = quantity certainty + cost savings</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "CAC commands behavior; market-based instruments change incentives. The choice is not 'regulation vs market' but 'which instrument for which context.'"
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Market-based = no regulation." All market instruments REQUIRE regulation (cap setting, tax rate setting, monitoring, enforcement). The market operates WITHIN a regulatory framework.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: CAC vs Market types</summary>
+            <div class="recall-content">
+              <p><strong>CAC:</strong> Standards (MINAS), Bans, Permits/quotas/licenses<br>
+              <strong>Using Markets — Charge Systems:</strong> Effluent, user, product, admin, impact fees<br>
+              <strong>Using Markets — Fiscal/Taxes:</strong> Pollution taxes, input taxes, tech subsidies, R&D subsidies<br>
+              <strong>Using Markets — Financial:</strong> Subsidies, soft loans, grants<br>
+              <strong>Creating Markets:</strong> Property rights, tradable permits, offsets, liability insurance<br>
+              <strong>Participation:</strong> Voluntary agreements, public participation, info disclosure, monitoring</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="coase-ppp">
+        <div class="section-header"><span class="section-number">02</span><div class="section-title"><h2>Coase Theorem, Polluter Pays & Internalizing Externalities</h2></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Coase Theorem:</strong> If property rights clear + transaction costs low → bargaining achieves efficient outcome regardless of initial allocation.<br>
+            <strong>Internalizing Externalities:</strong> Making polluter face full social cost via economic incentives/disincentives + policy instruments.<br>
+            <strong>Polluter Pays Principle (PPP):</strong> Polluter bears cost of pollution prevention/control.<br>
+            <strong>First Approach (Property Rights):</strong> Lack of property rights → externality → create property rights (e.g., private air ownership → buy right to pollute).
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> Neighbor's loud music. Coase: if you have right to quiet, neighbor pays you to reduce volume; if neighbor has right to play, you pay them to lower volume. Efficient volume reached either way — IF transaction costs low.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/policy-instruments.html" title="Coase & PPP" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 2: Coase theorem, PPP, and instrument comparison table</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Coase in Practice — Noise Pollution</h4>
+            <ol>
+              <li><strong>Scenario:</strong> Factory noise affects 50 nearby residents</li>
+              <li><strong>Property rights unclear:</strong> Who has right — factory to make noise, or residents to quiet?</li>
+              <li><strong>Transaction costs HIGH:</strong> 50 residents + 1 factory = bargaining impractical</li>
+              <li><strong>Result:</strong> Coase fails → need regulation (standards, taxes, permits)</li>
+              <li><strong>Lesson:</strong> Coase works for 2 parties, low transaction costs; fails for diffuse pollution</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Coase is a benchmark, not a policy prescription. It tells us WHY markets fail (transaction costs, missing rights) — not that markets always work."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Coase says government shouldn't regulate." Coase says: IF rights clear + transaction costs low → private bargaining works. Real world: rights unclear, transaction costs high → regulation needed. Coase explains WHY we need policy, not that we don't.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Coase + PPP + Internalization</summary>
+            <div class="recall-content">
+              <p><strong>Coase:</strong> Clear rights + low transaction costs → efficient bargaining (distribution ≠ efficiency)<br>
+              <strong>PPP:</strong> Polluter bears cost of prevention/control (internalize externality)<br>
+              <strong>Internalization:</strong> Economic incentives (taxes, charges) + disincentives + policy instruments<br>
+              <strong>First approach:</strong> Create property rights (e.g., private air ownership → buy right to pollute)</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="so2-case">
+        <div class="section-header"><span class="section-number">03</span><div class="section-title"><h2>US SO₂ Allowance Trading: Case Study</h2></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Design:</strong> 1 allowance = 1 ton SO₂/year, bankable, tradable, compliance after allocation year.<br>
+            <strong>Why robust market emerged:</strong> (1) Wide cost differences in abatement, (2) Flexible policy, (3) Straightforward implementation, (4) Enforced provisions.<br>
+            <strong>Results:</strong> 50% cost savings vs CAC; rapid scrubber innovation; allowance banking for future compliance.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> Cap-and-trade = musical chairs with tradable chairs. Total chairs (allowances) = cap. Firms can sit (comply), trade chairs, or save chairs for later. Music stops (compliance year) → everyone must have a chair.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/policy-instruments.html" title="SO₂ Allowance Case" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 3: SO₂ allowance design and why the market worked</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Why SO₂ Trading Worked for Acid Rain</h4>
+            <ol>
+              <li><strong>Heterogeneous costs:</strong> Scrubbers cheap for some plants, expensive for others → gains from trade</li>
+              <li><strong>Banking:</strong> Early reducers save allowances → smooths investment over time</li>
+              <li><strong>Enforcement:</strong> Continuous emissions monitoring (CEMS) + heavy penalties</li>
+              <li><strong>Result:</strong> 50% cost savings; SO₂ emissions halved; acid rain reduced; innovation in scrubbers</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "SO₂ trading worked because it turned a uniform standard into a flexible market where low-cost reducers profit and high-cost reducers buy time — but only with strict monitoring and enforcement."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Cap-and-trade always works." SO₂ worked because: (1) large number of sources, (2) measurable emissions (CEMS), (3) heterogeneous costs, (4) federal enforcement. Carbon markets struggle with: measurement issues, fewer sources, political interference, offset quality.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: SO₂ allowance design + why it worked</summary>
+            <div class="recall-content">
+              <p><strong>Design:</strong> 1 allowance = 1 ton SO₂/year; bankable, tradable, compliance after allocation year<br>
+              <strong>Why worked:</strong> (1) Wide cost differences → gains from trade, (2) Flexible (banking/trading), (3) Straightforward, (4) Enforced<br>
+              <strong>Result:</strong> 50% cost savings vs CAC; innovation; acid rain reduced<br>
+              <strong>Lesson for carbon:</strong> Needs measurement, enforcement, heterogeneous costs, political commitment</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="instrument-selection">
+        <div class="section-header"><span class="section-number">04</span><div class="section-title"><h2>Selection Criteria for Policy Instruments</h2></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Selection criteria:</strong><br>
+            → Static Cost Efficiency (at any point in time)<br>
+            → Dynamic Cost Efficiency (over time — innovation incentive)<br>
+            → Goal Fulfillment (certainty of reaching target)<br>
+            → Administrative Costs (ease/cost of implementation)<br>
+            → Barriers to Entry (should not create monopoly)<br>
+            → Polluter Pays Principle (polluter bears cost)<br>
+            → Politics of Implementation (acceptability, rent-seeking risk)
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> Choosing a car: fuel efficiency (static), maintenance cost over time (dynamic), reaches destination (goal), maintenance ease (admin), doesn't block others (entry), you pay for gas (PPP), family agrees (politics).
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/policy-instruments.html" title="Instrument Selection Criteria" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 4: Complete instrument comparison across 7 selection criteria</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Choosing Instrument for Urban Air Pollution</h4>
+            <ol>
+              <li><strong>Goal:</strong> Reduce PM2.5 by 30% in 5 years</li>
+              <li><strong>Static efficiency:</strong> Taxes/Permits > CAC (firms choose cheapest reductions)</li>
+              <li><strong>Dynamic efficiency:</strong> Taxes/Permits > CAC (innovation incentive)</li>
+              <li><strong>Goal fulfillment:</strong> Permits > Taxes > CAC (permits = quantity certainty)</li>
+              <li><strong>Admin:</strong> CAC easiest; Permits hardest (monitoring, trading platform)</li>
+              <li><strong>Entry barriers:</strong> CAC high; Taxes neutral; Permits depend on design</li>
+              <li><strong>PPP:</strong> All can satisfy if permits auctioned</li>
+              <li><strong>Politics:</strong> Taxes face opposition; CAC rent-seeking; Permits neutral</li>
+              <li><strong>Choice:</strong> Permits if capacity for monitoring; Taxes if simpler admin needed</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "No instrument dominates on all criteria. The art of policy design is matching instrument to context: permits for quantity certainty, taxes for price certainty, CAC for administrative simplicity and toxic hotspots."
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: 7 selection criteria with best instrument each</summary>
+            <div class="recall-content">
+              <p><strong>1. Static cost efficiency:</strong> Taxes/Permits > CAC<br>
+              <strong>2. Dynamic cost efficiency:</strong> Taxes/Permits > CAC<br>
+              <strong>3. Goal fulfillment:</strong> Permits > Taxes > CAC<br>
+              <strong>4. Administrative ease:</strong> CAC > Taxes > Permits<br>
+              <strong>5. Barrier to entry:</strong> Taxes neutral, CAC high, Permits depends<br>
+              <strong>6. Polluter Pays:</strong> All three (if permits auctioned)<br>
+              <strong>7. Politics:</strong> CAC rent-seeking, Taxes opposition, Permits neutral</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="section reveal" id="end-sem-cases">
+        <div class="section-header"><span class="section-number">05</span><div class="section-title"><h2>End-Sem Case Studies: Indian Environmental Policy</h2><p class="section-subtitle">Key cases from HS 200 end-sem — Sardar Sarovar, Vandana Shiva, Plachimada, Arundhati Roy, Appadurai</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Sardar Sarovar Dam — Three Conflicting Purposes:</strong>
+            <ol>
+              <li><strong>Irrigation:</strong> Needs water stored for dry season agriculture</li>
+              <li><strong>Power Production:</strong> Needs water released through turbines → reservoir drawn down</li>
+              <li><strong>Flood Control:</strong> Needs EMPTY reservoir to absorb monsoon surges</li>
+            </ol>
+            <strong>Conflict:</strong> Irrigation wants high water; Power wants release; Flood control wants empty. Post-monsoon: if water kept for power/irrigation, no flood storage for NEXT monsoon. If emptied for flood control, no water for irrigation/power.
+            <strong>Exam trap:</strong> "Flooding prevented by maintaining reservoir levels during post-monsoon" is WRONG — flooding risk is DURING monsoon; post-monsoon high levels REDUCE flood storage for next monsoon.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A household water tank. Morning: save for cooking (irrigation). Day: run tap for shower (power). Night: keep empty for rain harvesting (flood control). You can't do all three simultaneously — the tank has one capacity.
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Dam Conflict Diagnosis</h4>
+            <ol>
+              <li><strong>Monsoon (June-Sept):</strong> Flood control priority → reservoir MUST be low/empty</li>
+              <li><strong>Post-monsoon (Oct-Mar):</strong> Irrigation priority → reservoir filled</li>
+              <li><strong>Power vs Irrigation:</strong> Power needs release → conflicts with irrigation storage</li>
+              <li><strong>Monsoon failure:</strong> Reservoir empty → no irrigation, no power, no flood buffer</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Due to seasonal rainfall, three major purposes of dams conflict: irrigation, power production and flood-control. Post-monsoon water storage for power/irrigation REDUCES flood storage capacity for the NEXT monsoon."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> Statement D is WRONG: "Flooding prevented by maintaining reservoir levels during post-monsoon when flooding possibility is greater." Flooding risk is DURING monsoon, not post-monsoon. Maintaining high levels post-monsoon REDUCES flood storage for NEXT monsoon.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: 3 conflicting dam purposes + the post-monsoon trap</summary>
+            <div class="recall-content">
+              <p><strong>3 Purposes:</strong> Irrigation (store), Power (release), Flood Control (empty)<br>
+              <strong>Seasonal conflict:</strong> Monsoon = flood risk (need empty); Dry = need water (store)<br>
+              <strong>Trap:</strong> Post-monsoon high levels = REDUCED flood storage for next monsoon</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="vandana-shiva-gr">
+        <div class="section-header"><span class="section-number">06</span><div class="section-title"><h2>Vandana Shiva: HYV Wheat & Green Revolution Critique</h2></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>HYV Wheat Water Use:</strong> "High yielding varieties of wheat may yield over 40% more than traditional varieties, but require <strong>FOUR TIMES</strong> as much water."<br>
+            <strong>Green Revolution Monocultures:</strong> "Reduced genetic diversity by replacing mixtures and rotations of wheat, maize, millets, pulses, and oilseeds with <strong>MONOCULTURES</strong> of wheat and rice."<br>
+            <strong>Core argument:</strong> HYV = more yield but much higher water intensity + loss of agro-biodiversity + increased vulnerability to pests/disease.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A student who scores 40% higher on exams but needs 4x more study time and burns out faster. Short-term gain, long-term fragility.
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Shiva's Green Revolution Critique</h4>
+            <ol>
+              <li><strong>Yield:</strong> HYV wheat ~40% more grain per hectare</li>
+              <li><strong>Water:</strong> ~4x more irrigation water required (intensive irrigation)</li>
+              <li><strong>Diversity:</strong> Replaced polycultures (wheat+maize+millets+pulses+oilseeds) → wheat/rice monocultures</li>
+              <li><strong>Consequences:</strong> Groundwater depletion, pest vulnerability, loss of traditional seeds, chemical dependence</li>
+              <li><strong>Policy lesson:</strong> "Poverty is the greatest polluter" — not blaming poor, but poverty FORCES environmental degradation</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Vandana Shiva's HYV wheat yields 40% more grain but demands 4x water and replaces biodiverse polycultures with fragile monocultures — the 'violence of the Green Revolution' is ecological and social."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Poverty = greatest polluters" means poverty FORCES degradation (survival needs), not that poor are to blame. Also: "Monocultures" is the correct term for what replaced diverse rotations, not "genetics" or "biodiversity."
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Shiva's 2 key numbers + monoculture replacement</summary>
+            <div class="recall-content">
+              <p><strong>HYV wheat:</strong> 40% more yield, <strong>4x water</strong><br>
+              <strong>Green Revolution:</strong> Replaced wheat+maize+millets+pulses+oilseeds rotations → <strong>Monocultures</strong> of wheat and rice<br>
+              <strong>Core:</strong> Higher productivity = higher resource intensity + biodiversity loss</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="plachimada-arundhati">
+        <div class="section-header"><span class="section-number">07</span><div class="section-title"><h2>Plachimada, Arundhati Roy & Appadurai: Water Justice</h2></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Plachimada Coca-Cola Case:</strong> Kerala High Court used the <strong>Public Trust Doctrine</strong>: "Certain resources like air, sea, waters, and forests have such great importance to the people as a whole that it would be wholly unjustified to make them a subject of private ownership."<br>
+            <strong>Arundhati Roy — Displacement:</strong> Estimates <strong>~44 million</strong> people displaced by big dams in last 50 years in India.<br>
+            <strong>Arjun Appadurai — Liquid City:</strong> Clean water is the basis for revolution in <strong>Public Health</strong> (documentary "Liquid City").<br>
+            <strong>Dam Purposes:</strong> Due to seasonal rainfall, three major purposes conflict: <strong>Irrigation, Power Production and Flood-Control</strong>.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A corporation extracts groundwater (Coca-Cola) → community wells dry up. State says "private property." Court says "water is public trust — cannot be privatized." This is the Public Trust Doctrine in action.
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Water Justice Cases</h4>
+            <ol>
+              <li><strong>Plachimada:</strong> Coca-Cola bottling plant → groundwater depletion → Public Trust Doctrine applied → groundwater = public trust resource</li>
+              <li><strong>Big Dams:</strong> 44 million displaced in 50 years (Arundhati Roy) → development-induced displacement = ecological refugees</li>
+              <li><strong>Liquid City:</strong> Mumbai water documentary → clean water = basis for PUBLIC HEALTH revolution (not economic growth, sanitation alone)</li>
+              <li><strong>Dam purposes:</strong> Irrigation, Power production, Flood control — seasonal conflict</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Plachimada established groundwater as Public Trust resource; Roy quantified 44 million dam-displaced; Appadurai showed clean water = public health foundation; all three reveal water as justice issue, not just resource."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> Public Trust Doctrine ≠ Public-Private Partnership. Doctrine = state holds resources in trust for public, cannot privatize. Also: 44 million (not 33, 55, 22). Appadurai = Public Health (not economic growth/sanitation). Dam purposes = irrigation + power + flood control (not forestry/drinking water).
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: 3 water justice cases + dam purposes</summary>
+            <div class="recall-content">
+              <p><strong>Plachimada:</strong> Coca-Cola groundwater → Public Trust Doctrine (air/sea/water/forests = public trust)<br>
+              <strong>Arundhati Roy:</strong> 44 million displaced by big dams in 50 years<br>
+              <strong>Appadurai:</strong> Liquid City → clean water = basis for <strong>Public Health</strong> revolution<br>
+              <strong>Dam purposes:</strong> Irrigation, <strong>Power Production</strong>, <strong>Flood Control</strong></p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="section reveal" id="practice-m8">
+        <div class="section-header"><span class="section-number">🎯</span><div class="section-title"><h2>Module 8 Practice MCQs</h2></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M8-1.</strong> Coase Theorem states that with well-defined property rights and zero transaction costs:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m8q1" value="incorrect">Government regulation is always necessary</label>
+              <label class="mcq-option"><input type="radio" name="m8q1" value="correct">Bargaining leads to efficient outcome regardless of initial rights allocation</label>
+              <label class="mcq-option"><input type="radio" name="m8q1" value="incorrect">Pollution will be completely eliminated</label>
+              <label class="mcq-option"><input type="radio" name="m8q1" value="incorrect">The polluter always pays</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Coase: efficiency is independent of initial allocation if rights clear and transaction costs zero. Initial allocation affects DISTRIBUTION (who pays whom), not efficiency. Real world: transaction costs > 0 → Coase fails."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Bargaining leads to efficient outcome regardless of initial rights allocation</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M8-2.</strong> Which instrument provides the MOST certainty of achieving a specific aggregate pollution reduction target?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m8q2" value="incorrect">Emission standards (CAC)</label>
+              <label class="mcq-option"><input type="radio" name="m8q2" value="incorrect">Effluent taxes</label>
+              <label class="mcq-option"><input type="radio" name="m8q2" value="correct">Tradable permits</label>
+              <label class="mcq-option"><input type="radio" name="m8q2" value="incorrect">All equally certain</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">Permits = quantity instrument; cap = target. Taxes = price instrument; quantity depends on unknown MAC. CAC = firm-level certainty only. From comparison table: Goal fulfillment = Permits YES, Taxes NO, CAC NO (aggregate)."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Tradable permits</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M8-3.</strong> The Polluter Pays Principle (PPP) is satisfied by:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m8q3" value="incorrect">Only taxes</label>
+              <label class="mcq-option"><input type="radio" name="m8q3" value="incorrect">Only permits</label>
+              <label class="mcq-option"><input type="radio" name="m8q3" value="incorrect">Only CAC</label>
+              <label class="mcq-option"><input type="radio" name="m8q3" value="correct">All three (CAC, taxes, permits) IF permits are auctioned</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">PPP = polluter bears cost. CAC: polluter pays for compliance. Taxes: polluter pays tax = cost. Permits: IF auctioned, polluter pays for allowances; IF grandfathered, polluter gets windfall gain → violates PPP. From table: PPP = YES for all IF permits auctioned."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>All three (CAC, taxes, permits) IF permits are auctioned</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M8-4.</strong> The US SO₂ allowance program created a robust market because of ALL EXCEPT:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m8q4" value="incorrect">Wide differences in emission abatement costs</label>
+              <label class="mcq-option"><input type="radio" name="m8q4" value="incorrect">Policy was flexible (banking, trading allowed)</label>
+              <label class="mcq-option"><input type="radio" name="m8q4" value="incorrect">Implementation was straightforward</label>
+              <label class="mcq-option"><input type="radio" name="m8q4" value="correct">Allowances were allocated for free (grandfathered) to all firms</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">Key success factors: (1) Wide cost differences, (2) Flexible policy, (3) Straightforward implementation, (4) Enforced provisions. Grandfathering (free allocation) was done BUT it violates PPP — the key economic success factors are the four listed above. Free allocation was a political compromise, not an economic success factor."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Allowances were allocated for free (grandfathered) to all firms</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M8-5.</strong> For dynamic cost efficiency (innovation incentive over time), which instrument ranks highest?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m8q5" value="incorrect">CAC (standards)</label>
+              <label class="mcq-option"><input type="radio" name="m8q5" value="correct">Taxes and permits (both YES)</label>
+              <label class="mcq-option"><input type="radio" name="m8q5" value="incorrect">Only taxes</label>
+              <label class="mcq-option"><input type="radio" name="m8q5" value="incorrect">Only permits</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">Dynamic efficiency = incentive for innovation over time. Taxes: continuous incentive to reduce tax burden. Permits: incentive to reduce need for allowances. CAC: once standard met, no further incentive. From table: Dynamic efficiency = NO for CAC, YES for Taxes, YES for Permits."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Taxes and permits (both YES)</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="anchor-rail" aria-label="On-page navigation">
+      <h4>Module 08</h4>
+      <a href="#cac-market" class="anchor-link">01 CAC vs Market-Based</a>
+      <a href="#coase-ppp" class="anchor-link">02 Coase & PPP</a>
+      <a href="#so2-case" class="anchor-link">03 SO₂ Case Study</a>
+      <a href="#instrument-selection" class="anchor-link">04 Selection Criteria</a>
+      <a href="#end-sem-cases" class="anchor-link">05 End-Sem Cases</a>
+      <a href="#vandana-shiva-gr" class="anchor-link">06 Vandana Shiva/GR</a>
+      <a href="#plachimada-arundhati" class="anchor-link">07 Water Justice</a>
+      <a href="#practice-m8" class="anchor-link">🎯 Practice MCQs</a>
+      <h4>Navigation</h4>
+      <a href="index.html" class="anchor-link">← Home</a>
+      <a href="module-7-pollution.html" class="anchor-link">← Prev: Module 07</a>
+      <a href="module-9-global-warming.html" class="anchor-link">Next: Module 09 →</a>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>HS 250 — Module 08: Environmental Policy Instruments · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

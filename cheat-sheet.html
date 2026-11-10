@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheat Sheet — HS 250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" style="--progress: 0%"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand-link">
+      <span class="brand-mark">🌿</span>
+      <span>HS 250 Study Site</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cheat-sheet.html" class="nav-link active">Cheat Sheet</a>
+      <a href="practice.html" class="nav-link">Practice MCQs</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </header>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <section class="hero reveal">
+        <div class="hero-meta">
+          <span class="pill pill-week">HS 250</span>
+          <span class="pill pill-type">Cheat Sheet</span>
+        </div>
+        <h1>Complete Course Cheat Sheet</h1>
+        <p class="hero-lead">One-page reference for all 12 modules — formulas, principles, tables, and exam traps</p>
+      </section>
+
+      <!-- MODULE QUICK REFERENCE -->
+      <section class="section reveal" id="modules">
+        <div class="section-header"><span class="section-number">📚</span><div class="section-title"><h2>Module Quick Reference</h2><p class="section-subtitle">One-line recall per module with key concepts</p></div></div>
+
+        <div class="visual-wrapper" style="padding: var(--space-lg);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M01 Sociology of Environment</strong>
+              <p>Why Care? 5 lenses — technology, perception, response, dependence, organization. Utilitarian vs Intrinsic value. MDGs (8 goals, 2015 target) vs HDI (health, education, income) vs Sustainable Development.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M02 Environment & Development</strong>
+              <p>Stockholm 1972 dual agenda (environment + development). Brundtland SD: "needs of present without compromising future." Venn (weak/political) vs Nested (strong/material) diagrams.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M03 Views of Sustainability</strong>
+              <p>Weak (substitutable capitals) vs Strong (non-substitutable natural capital) vs Deep Green (intrinsic value). Haughton's 5 equity principles. Status Quo / Reform / Transformation approaches.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M04 History of Environmentalism</strong>
+              <p>Silent Spring (1962) → Bhopal (1984). North-South divide. Environmentalism of the Poor (Agarwal, Guha). Chipko (1973), KPL. Waves: conservation → pollution → justice.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M05 Tribal Ecologies</strong>
+              <p>Iron Triangle: omnivores (elite consumers), ecosystem people (subsistence), ecological refugees (displaced). Tribal: land as ontological core. Sacred groves as cultural conservation.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M06 Environmental Economics</strong>
+              <p>I = P × A × T. Public goods (non-excludable, non-rival). Tragedy of commons. Prisoner's dilemma. Externalities: negative (S>P), positive (P>S). Private vs Social costs.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M07 Air, Water & Waste Pollution</strong>
+              <p>Air: primary/secondary pollutants, criteria pollutants (PM, SO₂, NOx, CO, O₃, Pb), TRIC, smog types, acid deposition. Water: point vs non-point. Groundwater depletion. Ozone: CFCs, Montreal Protocol.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M08 Environmental Policy Instruments</strong>
+              <p>CAC (standards, bans, tech mandates) vs Market-based (taxes, permits, subsidies). Coase theorem. Polluter Pays Principle. SO₂ allowances (US Acid Rain). Comparison table: goal fulfillment, efficiency, admin ease.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M09 Global Warming & Kyoto</strong>
+              <p>GHGs (CO₂, CH₄, N₂O, F-gases). UNFCCC → Kyoto Protocol. Mechanisms: allowance-based (domestic allowances, JI) + project-based (CDM). Emissions trading. CBDR principle.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M10 Philosophy: Greeks-Modern</strong>
+              <p>Pre-Socratics → Plato (Forms) → Aristotle (teleology). Hargrove: Greeks saw eco-phenomena as perishable. Descartes: dualism, primary/secondary qualities, God sustains change. Kant: sublime. Heidegger: enframing.</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M11 Modern Env Philosophy</strong>
+              <p>Science critique (Cartesian). Logical positivism, fact/value split. Hume (is/ought). Darwin (continuity). Environmental philosophy 1970s (Routley, Passmore). Deep ecology roots (Naess).</p>
+            </div>
+            <div class="goal-card" style="border-left: 4px solid var(--brand);">
+              <strong>M12 Indian/Buddhist/Ecofeminism</strong>
+              <p>Realist (Samkhya, Nyaya) vs Idealist (Vedanta, Buddhist). Sentience criteria. Buddhist: dependent origination (pratītyasamutpāda), impermanence, experiential knowing. Panchsheel. Ecofeminism: dualisms (Nature/Culture, Body/Mind), logic of domination.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULA WALL -->
+      <section class="section reveal" id="formulas">
+        <div class="section-header"><span class="section-number">🧮</span><div class="section-title"><h2>Formula Wall</h2><p class="section-subtitle">Key equations, definitions, and worked formulas</p></div></div>
+
+        <div class="visual-wrapper" style="padding: var(--space-lg);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--brand); margin-bottom: var(--space-md);">I = P × A × T</h3>
+              <p><strong>Environmental Impact</strong> = Population × Affluence × Technology</p>
+              <p class="ts" style="margin-top: var(--space-sm);">All three multiply — no single factor sufficient alone. T = impact per unit consumption.</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--accent); margin-bottom: var(--space-md);">Externalities</h3>
+              <p><strong>Negative:</strong> Social Cost > Private Cost</p>
+              <p><strong>Positive:</strong> Private Cost > Social Cost</p>
+              <p class="ts" style="margin-top: var(--space-sm);">Social Cost = Private Cost + External Cost. Pigouvian tax = MEC at Q*.</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--alert); margin-bottom: var(--space-md);">Tragedy of Commons</h3>
+              <p>Non-excludable + Rivalrous → Overexploitation</p>
+              <p class="ts" style="margin-top: var(--space-sm);">Self-interest > Social interest. Solutions: privatize, regulate, community govern (Ostrom).</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--brand); margin-bottom: var(--space-md);">Brundtland SD</h3>
+              <p>"Meets needs of present without compromising future generations' ability to meet their own needs"</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--accent); margin-bottom: var(--space-md);">Coase Theorem</h3>
+              <p>If property rights defined + transaction costs ≈ 0 → bargaining achieves efficient outcome regardless of initial allocation</p>
+              <p class="ts" style="margin-top: var(--space-sm);">Real world: high transaction costs → allocation matters.</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--alert); margin-bottom: var(--space-md);">Polluter Pays Principle</h3>
+              <p>Polluter should bear cost of pollution prevention/control</p>
+              <p class="ts" style="margin-top: var(--space-sm);">OECD 1972. Internalizes external cost via taxes/permits/liability.</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--brand); margin-bottom: var(--space-md);">HDI Formula</h3>
+              <p>HDI = (Health Index × Education Index × Income Index)^(1/3)</p>
+              <p class="ts" style="margin-top: var(--space-sm);">Health: life expectancy. Education: mean/expected schooling. Income: GNI per capita (log).</p>
+            </div>
+
+            <div class="def-box" style="text-align: center; padding: var(--space-xl);">
+              <h3 style="color: var(--accent); margin-bottom: var(--space-md);">MDGs vs SDGs</h3>
+              <p>MDGs: 8 goals, 2015 target, developing focus</p>
+              <p class="ts" style="margin-top: var(--space-sm);">SDGs: 17 goals, 2030 target, universal, integrated (5Ps).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCANNABLE TABLES -->
+      <section class="section reveal" id="tables">
+        <div class="section-header"><span class="section-number">📊</span><div class="section-title"><h2>Scannable Comparison Tables</h2></div></div>
+
+        <div class="visual-wrapper" style="padding: var(--space-lg);">
+          <h3 style="margin-bottom: var(--space-lg); color: var(--brand);">SD Diagrams: Venn vs Nested</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Aspect</th><th>Venn (Political Reality)</th><th>Nested (Material Reality)</th></tr></thead>
+              <tbody>
+                <tr><td>Sustainability type</td><td>Weak (substitutable)</td><td>Strong (non-substitutable)</td></tr>
+                <tr><td>Relationship</td><td>Three equal overlapping pillars</td><td>Hierarchy: Env > Soc > Econ</td></tr>
+                <tr><td>Left arrow</td><td>"Diverts attention from important questions"</td><td>—</td></tr>
+                <tr><td>Right arrow</td><td>"Political Reality → SD"</td><td>"Material Reality"</td></tr>
+                <tr><td>Implies</td><td>Trade-offs, offsets allowed</td><td>No substitution for environment</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Policy Instruments Comparison</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Criterion</th><th>CAC</th><th>Taxes</th><th>Permits</th></tr></thead>
+              <tbody>
+                <tr><td>Static cost efficiency</td><td>NO</td><td>YES</td><td>YES*</td></tr>
+                <tr><td>Dynamic cost efficiency</td><td>NO</td><td>YES</td><td>YES†</td></tr>
+                <tr><td>Goal fulfillment</td><td>NO (firm only)</td><td>NO (optimal tax unknown)</td><td>YES</td></tr>
+                <tr><td>Administrative ease</td><td>BEST</td><td>Depends</td><td>HARD</td></tr>
+                <tr><td>Barrier to entry</td><td>HIGH</td><td>Neutral</td><td>Depends</td></tr>
+                <tr><td>Polluter Pays Principle</td><td>YES</td><td>YES</td><td>YES‡</td></tr>
+                <tr><td>Politics</td><td>Rent-seeking risk</td><td>Opposition if not refunded</td><td>Neutral</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Haughton's 5 Equity Principles</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Principle</th><th>Equity Type</th><th>Focus</th></tr></thead>
+              <tbody>
+                <tr><td>Futurity</td><td>Inter-generational</td><td>Future generations' needs</td></tr>
+                <tr><td>Social Justice</td><td>Intra-generational</td><td>Fairness within present</td></tr>
+                <tr><td>Trans-frontier Responsibility</td><td>Geographical</td><td>Cross-border impacts</td></tr>
+                <tr><td>Procedural Equity</td><td>Process</td><td>Open, fair treatment</td></tr>
+                <tr><td>Interspecies Equity</td><td>Biological</td><td>Biodiversity value</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Sustainability Approaches</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Approach</th><th>Status Quo</th><th>Reform</th><th>Transformation</th></tr></thead>
+              <tbody>
+                <tr><td>Core belief</td><td>Tech solves all; growth OK</td><td>Efficiency + regulation</td><td>Systemic change; limits</td></tr>
+                <tr><td>SD interpretation</td><td>Weak (Venn)</td><td>Weak → Strong</td><td>Strong (Nested)</td></tr>
+                <tr><td>Policy tools</td><td>Market, voluntary</td><td>Taxes, permits, standards</td><td>Redistribution, degrowth</td></tr>
+                <tr><td>Equity</td><td>Low priority</td><td>Reformist</td><td>Central (all 5 principles)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Iron Triangle: Guha & Gadgil</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Group</th><th>Access to Resources</th><th>Environmental Role</th></tr></thead>
+              <tbody>
+                <tr><td>Omnivores (elite)</td><td>High — corner benefits</td><td>Drive degradation remotely</td></tr>
+                <tr><td>Ecosystem People</td><td>Low — subsistence</td><td>Direct dependence, stewards</td></tr>
+                <tr><td>Ecological Refugees</td><td>Displaced, marginalized</td><td>Victims of displacement</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Kyoto Mechanisms</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Mechanism</th><th>Participants</th><th>Outcome</th></tr></thead>
+              <tbody>
+                <tr><td>Allowance-based</td><td>Domestic Allowances</td><td>Annex I only</td><td>Cap-and-trade within country</td></tr>
+                <tr><td>Allowance-based</td><td>Joint Implementation (JI)</td><td>Annex I ↔ Annex I</td><td>Project credits between developed</td></tr>
+                <tr><td>Project-based</td><td>Clean Development Mechanism (CDM)</td><td>Annex I → Non-Annex I</td><td>CERs from developing countries</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Air Pollutants Quick Reference</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Pollutant</th><th>Type</th><th>Source</th><th>Effect</th></tr></thead>
+              <tbody>
+                <tr><td>PM₂.₅ / PM₁₀</td><td>Primary</td><td>Combustion, dust</td><td>Respiratory, cardiovascular</td></tr>
+                <tr><td>SO₂</td><td>Primary</td><td>Coal, oil burning</td><td>Acid rain, respiratory</td></tr>
+                <tr><td>NOx</td><td>Primary</td><td>Vehicles, power plants</td><td>Smog, acid rain, ozone</td></tr>
+                <tr><td>O₃</td><td>Secondary</td><td>NOx + VOCs + sunlight</td><td>Smog, lung damage</td></tr>
+                <tr><td>CO</td><td>Primary</td><td>Incomplete combustion</td><td>O₂ transport reduction</td></tr>
+                <tr><td>Pb</td><td>Primary</td><td>Leaded fuel (phased out)</td><td>Neurological damage</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Water Pollution: Point vs Non-Point</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Aspect</th><th>Point Source</th><th>Non-Point Source</th></tr></thead>
+              <tbody>
+                <tr><td>Definition</td><td>Single, identifiable pipe/outlet</td><td>Diffuse, multiple origins</td></tr>
+                <tr><td>Examples</td><td>Factory effluent, sewage plant</td><td>Agricultural runoff, urban runoff</td></tr>
+                <tr><td>Regulation</td><td>Easier (CAC permits)</td><td>Harder (best management practices)</td></tr>
+                <tr><td>Monitoring</td><td>Direct measurement</td><td>Modeling, watershed approach</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style="margin: var(--space-2xl) 0 var(--space-lg); color: var(--brand);">Environmental Waves (Guha)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Wave</th><th>Era</th><th>Focus</th><th>Key Figure/Event</th></tr></thead>
+              <tbody>
+                <tr><td>1st: Conservation</td><td>Late 19th–early 20th</td><td>Wilderness, parks</td><td>Muir, Pinchot, Yellowstone</td></tr>
+                <tr><td>2nd: Pollution</td><td>1960s–70s</td><td>Toxins, health</td><td>Silent Spring, EPA, Earth Day</td></tr>
+                <tr><td>3rd: Justice/Equity</td><td>1980s–present</td><td>Distribution, participation</td><td>Chipko, Environmentalism of Poor</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXAM TRAPS -->
+      <section class="section reveal" id="traps">
+        <div class="section-header"><span class="section-number">⚠️</span><div class="section-title"><h2>Exam Traps — Quick Reference</h2></div></div>
+
+        <div class="visual-wrapper" style="padding: var(--space-lg);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-md);">
+            <div class="trap-box"><strong>Trap:</strong> "Sustainable development" ≠ "sustainable growth." Growth = quantitative increase; Development = qualitative improvement.</div>
+            <div class="trap-box"><strong>Trap:</strong> Intrinsic value ≠ "no human use." Intrinsic = value independent of use, not prohibition of use.</div>
+            <div class="trap-box"><strong>Trap:</strong> Gandhi's "poverty = greatest polluters" means poverty <em>forces</em> degradation, not that poor are to blame.</div>
+            <div class="trap-box"><strong>Trap:</strong> Venn = weak SD (substitutable); Nested = strong SD (non-substitutable). Don't confuse the arrows.</div>
+            <div class="trap-box"><strong>Trap:</strong> HDI and GDP both anthropocentric — neither captures ecological limits. SD adds that dimension.</div>
+            <div class="trap-box"><strong>Trap:</strong> "Sustainable development" integrates environment + socio-economic; it's not "environment plus development" as separate silos.</div>
+            <div class="trap-box"><strong>Trap:</strong> Negative externality = Social Cost > Private Cost. Positive = Private Cost > Social Cost. Don't flip.</div>
+            <div class="trap-box"><strong>Trap:</strong> Coase theorem: property rights solve externality IF transaction costs low. Real world = high transaction costs.</div>
+            <div class="trap-box"><strong>Trap:</strong> Permits fulfill goals better than taxes IF market not too thin. Taxes = price certainty, Permits = quantity certainty.</div>
+            <div class="trap-box"><strong>Trap:</strong> Deep ecology ≠ environmentalism. Deep ecology = non-human nature has intrinsic rights independent of human utility.</div>
+            <div class="trap-box"><strong>Trap:</strong> "Ecosystem people" ≠ "ecological refugees." Ecosystem people = subsistence users; refugees = displaced by projects.</div>
+            <div class="trap-box"><strong>Trap:</strong> Ostrom's design principles ≠ government ownership. They work for COMMUNITY/COMMON PROPERTY, not state property.</div>
+            <div class="trap-box"><strong>Trap:</strong> Montreal Protocol (ozone) ≠ Kyoto (climate). Montreal = universal, successful; Kyoto = differentiated, mixed.</div>
+            <div class="trap-box"><strong>Trap:</strong> JI (Joint Implementation) = Annex I ↔ Annex I. CDM = Annex I → Non-Annex I. Don't swap.</div>
+            <div class="trap-box"><strong>Trap:</strong> Descartes: God sustains change → no human nature-preservation needed. This is the anti-ecological consequence of dualism.</div>
+            <div class="trap-box"><strong>Trap:</strong> Kant's sublime = we project our reason onto nature → morality. Not "nature is beautiful." Science view disconnects; sublime reconnects via ethics.</div>
+            <div class="trap-box"><strong>Trap:</strong> Heidegger: technology is not instrumental; it's a way nature reveals itself (enframing). Problems of tech can't be solved technologically.</div>
+            <div class="trap-box"><strong>Trap:</strong> Buddhist dependent origination = universe as mutual web. Harm to nature = harm to self. Not "stewardship" (implies separation).</div>
+            <div class="trap-box"><strong>Trap:</strong> Ecofeminism's "oppressive conceptual framework" = value-hierarchical (X>Y), dualisms (Nature/Culture), logic of domination. "Egalitarian partnership" is the SOLUTION, not the framework.</div>
+            <div class="trap-box"><strong>Trap:</strong> Panchsheel = 5 principles (mutual respect, non-aggression, etc.) for tribal policy, NOT the 5 precepts of Buddhism.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE-SPECIFIC KEY POINTS -->
+      <section class="section reveal" id="module-points">
+        <div class="section-header"><span class="section-number">📝</span><div class="section-title"><h2>Module-Specific Key Points</h2><p class="section-subtitle">Detailed recall items per module for exam writing</p></div></div>
+
+        <div class="visual-wrapper" style="padding: var(--space-lg);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M01: Sociology — Definitions & Concepts</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Why Care (5 lenses):</strong> Technology (cultural response), Perception (societal), Response (power/institutions), Dependence (nature as life support), Organization (material interventions)</li>
+                  <li><strong>Utilitarian vs Intrinsic:</strong> Utilitarian = instrumental, human-centered; Intrinsic = value in itself, non-human centered</li>
+                  <li><strong>MDGs (8):</strong> Eradicate poverty, universal primary education, gender equality, child mortality, maternal health, combat HIV/AIDS, environmental sustainability, global partnership</li>
+                  <li><strong>HDI:</strong> 3 dimensions — health (life expectancy), education (schooling), income (GNI/capita). Geometric mean.</li>
+                  <li><strong>Development definitions:</strong> Economic growth (GDP), human development (HDI), sustainable development (Brundtland)</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M02: Env & Development — Stockholm & Brundtland</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Stockholm 1972:</strong> First UN environment conference. Dual agenda: environment AND development. "Only One Earth."</li>
+                  <li><strong>Brundtland (1987):</strong> WCED report "Our Common Future." SD = needs of present w/o compromising future. 3 pillars: needs, limits, future generations.</li>
+                  <li><strong>Venn diagram:</strong> 3 overlapping circles (Econ, Soc, Env). "Political Reality." Weak SD = substitutable.</li>
+                  <li><strong>Nested diagram:</strong> Concentric: Env > Soc > Econ. "Material Reality." Strong SD = non-substitutable.</li>
+                  <li><strong>Left arrow (Venn):</strong> "Diverts attention from important questions." Right arrow: "Political Reality → SD."</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M03: Sustainability Views — Weak/Strong/Deep</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Weak SD (Solow/Hartwick):</strong> Capitals substitutable. Maintain total capital stock (K_m + K_n constant). Tech optimism.</li>
+                  <li><strong>Strong SD (Daly, Costanza):</strong> Natural capital non-substitutable. Critical natural capital must be maintained. Scale matters.</li>
+                  <li><strong>Deep Green:</strong> Intrinsic value of nature. Non-anthropocentric. Biocentrism/ecocentrism.</li>
+                  <li><strong>Haughton's 5 Equity:</strong> Futurity (inter-gen), Social Justice (intra-gen), Trans-frontier (geo), Procedural (process), Interspecies (bio).</li>
+                  <li><strong>Status Quo / Reform / Transformation:</strong> Status quo = tech fixes; Reform = efficiency + regulation; Transformation = systemic + limits.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M04: Environmentalism History — Waves & India</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Silent Spring (1962):</strong> Rachel Carson. DDT, bioaccumulation. Catalyst for modern env movement.</li>
+                  <li><strong>Bhopal (1984):</strong> Union Carbide MIC leak. World's worst industrial disaster. Corporate accountability.</li>
+                  <li><strong>North-South divide:</strong> North = historical emissions, capacity; South = development needs, vulnerability. CBDR.</li>
+                  <li><strong>Environmentalism of the Poor (Agarwal/Guha):</strong> Survival ecology vs luxury ecology. Poor = victims + agents of conservation.</li>
+                  <li><strong>Chipko (1973):</strong> "Hug the trees." Women-led. Subsistence vs commercial forestry.</li>
+                  <li><strong>KPL (Kerala People's Science Movement):</strong> Science for people, participatory.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M05: Tribal Ecologies — Iron Triangle & FRA</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Omnivores:</strong> ~10-15% elite. High resource access. Displace costs to others.</li>
+                  <li><strong>Ecosystem People:</strong> Subsistence. Direct resource dependence. Traditional ecological knowledge.</li>
+                  <li><strong>Ecological Refugees:</strong> Displaced by dams, mines, parks. Loss of land = loss of identity.</li>
+                  <li><strong>Tribal perspective:</strong> "Land is the ontological core of a tribe's being and fullness." Sacred groves = cultural + biodiversity.</li>
+                  <li><strong>FRA 2006:</strong> Recognizes individual + community forest rights. Gram sabha as authority.</li>
+                  <li><strong>PESA 1996:</strong> Extends Panchayats to scheduled areas. Gram sabha powers over resources.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M06: Economics — Public Goods, Externalities, Commons</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Public goods:</strong> Non-excludable + Non-rival (e.g., clean air, ozone layer). Market failure = underprovision.</li>
+                  <li><strong>Common Pool Resources:</strong> Non-excludable + Rival (e.g., fisheries, groundwater). Tragedy of commons.</li>
+                  <li><strong>Club goods:</strong> Excludable + Non-rival (e.g., toll road).</li>
+                  <li><strong>Private goods:</strong> Excludable + Rival.</li>
+                  <li><strong>Externalities:</strong> Negative (pollution: S>P), Positive (vaccination: P>S). Pigouvian tax = MEC at Q*.</li>
+                  <li><strong>Prisoner's Dilemma:</strong> Individual rationality → collective suboptimal. Repeated games → cooperation possible.</li>
+                  <li><strong>Free rider problem:</strong> Non-excludability → benefit without paying.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M07: Pollution — Air, Water, Ozone</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Criteria pollutants (6):</strong> PM₂.₅, PM₁₀, SO₂, NOx, CO, O₃, Pb. NAAQS standards.</li>
+                  <li><strong>TRIC conditions:</strong> Temperature inversion, Radiation (night cooling), Inversion layer, Calm winds → trap pollutants.</li>
+                  <li><strong>Smog types:</strong> London (SO₂ + PM, cool/damp), Los Angeles (photochemical: NOx+VOCs+sun, hot).</li>
+                  <li><strong>Acid deposition:</strong> SO₂, NOx → H₂SO₄, HNO₃. Wet (rain) + Dry (particles). Damages forests, lakes, buildings.</li>
+                  <li><strong>Water — Point vs Non-point:</strong> Point = pipe; Non-point = runoff. BOD, DO, eutrophication (N, P).</li>
+                  <li><strong>Groundwater:</strong> Overdraft → subsidence, saltwater intrusion. Recharge slow.</li>
+                  <li><strong>Ozone depletion:</strong> CFCs → Cl radicals → O₃ destruction. Montreal Protocol (1987) = successful phase-out.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M08: Policy Instruments — CAC vs Market</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>CAC (Command & Control):</strong> Standards (emission, ambient, tech), bans, permits. Easy admin, rigid, no innovation incentive.</li>
+                  <li><strong>Market-based:</strong> Taxes (effluent), Tradable permits (cap-and-trade), Subsidies, Liability, Deposit-refund.</li>
+                  <li><strong>Coase Theorem:</strong> Bargaining solves if rights defined + low transaction costs. Reality = high costs.</li>
+                  <li><strong>Polluter Pays:</strong> Internalize cost. OECD 1972. Implemented via taxes/permits/liability.</li>
+                  <li><strong>SO₂ Allowance Trading (US 1990):</strong> Cap at 8.9M tons. Annual auctions + trading. Success: 50% reduction, low cost.</li>
+                  <li><strong>Comparison:</strong> Permits = goal fulfillment (quantity certainty). Taxes = price certainty. CAC = firm-level only.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M09: Global Warming — Kyoto Mechanisms</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>GHGs:</strong> CO₂ (76%), CH₄ (16%), N₂O (6%), F-gases (2%). GWP: CO₂=1, CH₄=28, N₂O=265.</li>
+                  <li><strong>UNFCCC (1992):</strong> Stabilize GHGs. CBDR. Annex I (developed) vs Non-Annex I.</li>
+                  <li><strong>Kyoto (1997):</strong> Annex I binding targets (avg -5.2% 1990 levels, 2008-12). US didn't ratify.</li>
+                  <li><strong>Flexibility Mechanisms:</strong> (1) Allowance-based: Domestic allowances (cap-and-trade), JI (Annex I→Annex I). (2) Project-based: CDM (Annex I→Non-Annex I, generates CERs).</li>
+                  <li><strong>CDM:</strong> Sustainable development + emission reduction. Additionality required.</li>
+                  <li><strong>Paris (2015):</strong> NDCs, bottom-up, 1.5-2°C, global stocktake.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M10: Greeks to Modern — Descartes, Kant, Heidegger</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Greeks (Hargrove):</strong> Eco-phenomena = perishable, unworthy of highest knowledge. Suspicion of sense-knowledge.</li>
+                  <li><strong>Plato:</strong> Forms > particulars. Nature as imperfect copy. Anti-empirical.</li>
+                  <li><strong>Aristotle:</strong> Teleology (final cause). Nature has purpose. But privileged metaphysics over physics.</li>
+                  <li><strong>Descartes:</strong> Dualism (res cogitans / res extensa). Primary qualities (math) vs secondary (sensory). "God sustains change" → no human nature-preservation needed. Animals = machines.</li>
+                  <li><strong>Kant:</strong> Sublime = fear → project reason onto nature → experience own rationality → morality. Fact/value split.</li>
+                  <li><strong>Heidegger:</strong> Technology = enframing (Gestell). Nature as standing reserve. Problems of tech ≠ tech solutions.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M11: Modern Env Philosophy — Science Critique, Deep Ecology</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Cartesian science critique:</strong> Reductionism, objectification, domination. Nature as machine.</li>
+                  <li><strong>Logical positivism:</strong> Verification principle. Ethics = emotive, non-cognitive. Fact/value split entrenched.</li>
+                  <li><strong>Hume:</strong> Is/ought gap. Cannot derive values from facts.</li>
+                  <li><strong>Darwin:</strong> Continuity (humans = animals). Undermines human exceptionalism.</li>
+                  <li><strong>Env philosophy 1970s:</strong> Routley "last man" thought experiment. Passmore "man's responsibility for nature."</li>
+                  <li><strong>Deep Ecology (Naess):</strong> Platform: intrinsic value, diversity, vital needs, population reduction, non-interference. Self-realization = identification with nature.</li>
+                  <li><strong>Shallow vs Deep:</strong> Shallow = resource management for humans. Deep = biospheric egalitarianism.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="recall-check" style="border: 1px solid var(--border); border-radius: var(--radius-md);">
+              <summary class="recall-summary"><strong>M12: Indian/Buddhist/Ecofeminism</strong></summary>
+              <div class="recall-content">
+                <ul style="padding-left: 1.5rem; line-height: 2;">
+                  <li><strong>Realist schools:</strong> Samkhya (prakriti/purusha), Nyaya (logic, atomism), Vaisheshika. World real, independent.</li>
+                  <li><strong>Idealist schools:</strong> Vedanta (Brahman), Buddhist (dependent origination, no-self). World = appearance/mind-dependent.</li>
+                  <li><strong>Sentience criteria:</strong> Pain/pleasure capacity. Animals = sentient. Plants = debated.</li>
+                  <li><strong>Buddhist:</strong> Pratītyasamutpāda (dependent origination) = mutual web. Anicca (impermanence). Anatta (no-self). Experiential knowing > abstract.</li>
+                  <li><strong>Panchsheel (Nehru 1958):</strong> 5 principles for tribal policy: (1) Non-imposition, (2) Respect rights, (3) Develop own genius, (4) Administer through own institutions, (5) Judge by human character not statistics.</li>
+                  <li><strong>Ecofeminism:</strong> Oppressive framework = value-hierarchical (X>Y), dualisms (Nature/Culture, Body/Mind, Emotion/Reason), logic of domination. Solution = egalitarian partnership.</li>
+                  <li><strong>Key figures:</strong> Shiva (Vandana), Mies, Plumwood, Warren.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="anchor-rail" aria-label="On-page navigation">
+      <h4>Cheat Sheet</h4>
+      <a href="#modules" class="anchor-link">📚 Module Quick Ref</a>
+      <a href="#formulas" class="anchor-link">🧮 Formula Wall</a>
+      <a href="#tables" class="anchor-link">📊 Comparison Tables</a>
+      <a href="#traps" class="anchor-link">⚠️ Exam Traps</a>
+      <a href="#module-points" class="anchor-link">📝 Module Key Points</a>
+      <h4>Navigation</h4>
+      <a href="index.html" class="anchor-link">← Home</a>
+      <a href="practice.html" class="anchor-link">Practice MCQs →</a>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>HS 250 — Cheat Sheet · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

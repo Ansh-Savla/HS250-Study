@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD Diagrams: Venn vs Nested</title>
+<style>
+  :root {
+    --text-primary: #1a1a18;
+    --text-secondary: #5f5e5a;
+    --text-tertiary: #88877f;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f5f0;
+    --bg-tertiary: #eeedeb;
+    --border: rgba(0,0,0,0.15);
+    --border-hover: rgba(0,0,0,0.3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #e8e6de;
+      --text-secondary: #b4b2a9;
+      --text-tertiary: #888780;
+      --bg-primary: #1a1a18;
+      --bg-secondary: #2c2c2a;
+      --bg-tertiary: #3d3d3a;
+      --border: rgba(255,255,255,0.15);
+      --border-hover: rgba(255,255,255,0.3);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-tertiary); display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; }
+  .card { background: var(--bg-primary); border-radius: 16px; padding: 32px; max-width: 780px; width: 100%; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  h1 { font-size: 18px; font-weight: 500; color: var(--text-primary); margin-bottom: 8px; }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; }
+  svg { width: 100%; height: auto; }
+
+  .t  { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); }
+  .ts { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; fill: var(--text-secondary); }
+  .th { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); font-weight: 500; }
+  .box { fill: var(--bg-secondary); stroke: var(--border); stroke-width: 0.5px; }
+  .arr { stroke: var(--text-secondary); stroke-width: 1.5px; fill: none; }
+  .leader { stroke: var(--text-tertiary); stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
+  .node { cursor: pointer; transition: opacity 0.15s; }
+  .node:hover { opacity: 0.82; }
+
+  .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #E1F5EE; stroke: #0F6E56; }
+  .c-teal > .th, .c-teal > text.th { fill: #085041; }
+  .c-teal > .ts, .c-teal > text.ts { fill: #0F6E56; }
+  .c-teal > .t,  .c-teal > text.t  { fill: #085041; }
+
+  .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #FAEEDA; stroke: #854F0B; }
+  .c-amber > .th, .c-amber > text.th { fill: #633806; }
+  .c-amber > .ts, .c-amber > text.ts { fill: #854F0B; }
+  .c-amber > .t,  .c-amber > text.t  { fill: #633806; }
+
+  .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #FAECE7; stroke: #993C1D; }
+  .c-coral > .th, .c-coral > text.th { fill: #712B13; }
+  .c-coral > .ts, .c-coral > text.ts { fill: #993C1D; }
+  .c-coral > .t,  .c-coral > text.t  { fill: #712B13; }
+
+  .c-gray > rect, .c-gray > circle, .c-gray > ellipse { fill: #F1EFE8; stroke: #5F5E5A; }
+  .c-gray > .th, .c-gray > text.th { fill: #444441; }
+  .c-gray > .ts, .c-gray > text.ts { fill: #5F5E5A; }
+  .c-gray > .t,  .c-gray > text.t  { fill: #444441; }
+
+  @media (prefers-color-scheme: dark) {
+    .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #085041; stroke: #5DCAA5; }
+    .c-teal > .th, .c-teal > text.th { fill: #9FE1CB; }
+    .c-teal > .ts, .c-teal > text.ts { fill: #5DCAA5; }
+
+    .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #633806; stroke: #EF9F27; }
+    .c-amber > .th, .c-amber > text.th { fill: #FAC775; }
+    .c-amber > .ts, .c-amber > text.ts { fill: #EF9F27; }
+
+    .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #712B13; stroke: #F0997B; }
+    .c-coral > .th, .c-coral > text.th { fill: #F5C4B3; }
+    .c-coral > .ts, .c-coral > text.ts { fill: #F0997B; }
+
+    .c-gray > rect, .c-gray > circle, .c-gray > ellipse { fill: #444441; stroke: #B4B2A9; }
+    .c-gray > .th, .c-gray > text.th { fill: #D3D1C7; }
+    .c-gray > .ts, .c-gray > text.ts { fill: #B4B2A9; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Two Diagrams of Sustainable Development</h1>
+  <p class="subtitle">Venn = Political Reality (weak SD)  |  Nested = Material Reality (strong SD)</p>
+  <svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+
+    <!-- DIAGRAM 1: VENN (left) -->
+    <text class="th" x="165" y="30" text-anchor="middle">Diagram 1: Venn — Political Reality</text>
+    <text class="ts" x="165" y="48" text-anchor="middle">Weak sustainability • Substitutability • Trade-offs</text>
+
+    <!-- Environment circle -->
+    <circle class="node c-teal" cx="165" cy="150" r="65" stroke-width="0.5"/>
+    <text class="th" x="165" y="132" text-anchor="middle" dominant-baseline="central">ENVIRONMENT</text>
+    <text class="ts" x="165" y="148" text-anchor="middle" dominant-baseline="central">(Ecological limits)</text>
+
+    <!-- Economy circle -->
+    <circle class="node c-amber" cx="255" cy="150" r="65" stroke-width="0.5"/>
+    <text class="th" x="255" y="132" text-anchor="middle" dominant-baseline="central">ECONOMY</text>
+    <text class="ts" x="255" y="148" text-anchor="middle" dominant-baseline="central">(Growth, jobs)</text>
+
+    <!-- Society circle -->
+    <circle class="node c-coral" cx="210" cy="205" r="65" stroke-width="0.5"/>
+    <text class="th" x="210" y="200" text-anchor="middle" dominant-baseline="central">SOCIETY</text>
+    <text class="ts" x="210" y="216" text-anchor="middle" dominant-baseline="central">(Equity, needs)</text>
+
+    <!-- Center overlap -->
+    <ellipse cx="210" cy="165" rx="30" ry="22" fill="#C8E6C9" stroke="#2D5A4A" stroke-width="1.5"/>
+    <text class="ts" x="210" y="168" text-anchor="middle" dominant-baseline="central" font-weight="600" fill="#2D5A4A">SD Zone</text>
+
+    <!-- Left arrow: Diverts attention -->
+    <path class="leader" d="M20 165 L80 165" marker-end="url(#arrow)"/>
+    <text class="ts" x="50" y="152" text-anchor="middle" fill="#C0392B" font-weight="600" transform="rotate(-90, 50, 152)">Diverts attention from</text>
+    <text class="ts" x="50" y="166" text-anchor="middle" fill="#C0392B" font-weight="600" transform="rotate(-90, 50, 166)">important questions</text>
+
+    <!-- Right arrow: Political Reality -->
+    <path class="arr" d="M330 165 L380 165" marker-end="url(#arrow)" stroke="#B8860B" stroke-width="2"/>
+    <text class="ts" x="355" y="188" text-anchor="middle" fill="#B8860B" font-weight="600">Political Reality → SD</text>
+
+    <!-- DIAGRAM 2: NESTED (right) -->
+    <text class="th" x="515" y="30" text-anchor="middle">Diagram 2: Nested — Material Reality</text>
+    <text class="ts" x="515" y="48" text-anchor="middle">Strong sustainability • Hierarchy • Non-substitutability</text>
+
+    <!-- Environment outer -->
+    <circle cx="515" cy="300" r="100" fill="none" stroke="#2D5A4A" stroke-width="2" stroke-dasharray="8,4"/>
+    <text class="th" x="515" y="210" text-anchor="middle" fill="#2D5A4A">ENVIRONMENT</text>
+    <text class="ts" x="515" y="226" text-anchor="middle">(Planetary boundary)</text>
+
+    <!-- Society middle -->
+    <circle cx="515" cy="300" r="65" fill="none" stroke="#2D5A4A" stroke-width="1.5"/>
+    <text class="th" x="515" y="260" text-anchor="middle" fill="#2D5A4A">SOCIETY</text>
+    <text class="ts" x="515" y="276" text-anchor="middle">(Within environment)</text>
+
+    <!-- Economy inner -->
+    <circle class="node c-teal" cx="515" cy="300" r="35" stroke-width="0.5"/>
+    <text class="th" x="515" y="297" text-anchor="middle" dominant-baseline="central">ECONOMY</text>
+    <text class="ts" x="515" y="311" text-anchor="middle" dominant-baseline="central">(Subset of society)</text>
+
+    <!-- Arrow: Material Reality -->
+    <path class="arr" d="M615 300 L675 300" marker-end="url(#arrow)" stroke="#B8860B" stroke-width="2"/>
+    <text class="ts" x="645" y="290" text-anchor="middle" fill="#B8860B" font-weight="600">Material Reality</text>
+
+  </svg>
+</div>
+</body>
+</html>

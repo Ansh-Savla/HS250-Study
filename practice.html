@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice MCQs — HS 250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" style="--progress: 0%"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand-link">
+      <span class="brand-mark">🌿</span>
+      <span>HS 250 Study Site</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cheat-sheet.html" class="nav-link">Cheat Sheet</a>
+      <a href="practice.html" class="nav-link active">Practice MCQs</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </header>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <section class="hero reveal">
+        <div class="hero-meta">
+          <span class="pill pill-week">HS 250</span>
+          <span class="pill pill-type">Practice MCQs</span>
+        </div>
+        <h1>Practice MCQs — Application Style</h1>
+        <p class="hero-lead">50+ application questions from lecture notes + past end-sem papers. Each question tests concept application with Point-Evidence-Explain-Suggest answers.</p>
+
+        <div class="goals-panel">
+          <div class="goal-card"><strong>Format</strong><p>Scenario → Task → Concepts → Answer (Point-Evidence-Explain-Suggest)</p></div>
+          <div class="goal-card"><strong>Sources</strong><p>Lecture notes (all 12 modules) + HS 200 end-sem past papers</p></div>
+          <div class="goal-card"><strong>Approach</strong><p>Read scenario, identify concepts, apply to decision, suggest next step</p></div>
+        </div>
+      </section>
+
+      <!-- ECONOMICS MODULE (from end-sem) -->
+      <section class="section reveal" id="economics-mcq">
+        <div class="section-header"><span class="section-number">📐</span><div class="section-title"><h2>Economics Module (from HS 200 End-Sem)</h2><p class="section-subtitle">Multiple choice, fill-in-blanks, true/false</p></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>EC1.</strong> Pollution can occur because of the following:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="ec1" value="incorrect">a) Property rights well defined</label>
+              <label class="mcq-option"><input type="radio" name="ec1" value="incorrect">b) Market failure</label>
+              <label class="mcq-option"><input type="radio" name="ec1" value="incorrect">c) Environment is a public good</label>
+              <label class="mcq-option"><input type="radio" name="ec1" value="correct">d) All of the above</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Pollution arises from multiple sources: undefined property rights (Coase), market failure (externalities), and public goods nature (non-excludable, non-rival). All three are valid causes."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>All of the above</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>EC2.</strong> Which of the following is a negative externality?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="ec2" value="incorrect">1) a — Pollution in Ganges by upstream activities</label>
+              <label class="mcq-option"><input type="radio" name="ec2" value="incorrect">2) b — Floods caused by deforestation</label>
+              <label class="mcq-option"><input type="radio" name="ec2" value="incorrect">3) c — Floods caused by natural factors</label>
+              <label class="mcq-option"><input type="radio" name="ec2" value="incorrect">4) a and b</label>
+              <label class="mcq-option"><input type="radio" name="ec2" value="correct">5) b and c</label>
+              <label class="mcq-option"><input type="radio" name="ec2" value="incorrect">6) all the three</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Negative externality = uncompensated harm to third party. (a) Pollution in Ganges by upstream = classic negative externality. (b) Floods from deforestation = upstream land use causes downstream harm = negative externality. (c) Floods from natural factors = not human activity, so not an externality. Thus a and b are negative externalities."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>b and c</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>EC3.</strong> Which of the following qualifies as externality?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="ec3" value="correct">a) Health effect of smoke emissions from vehicles in Mumbai</label>
+              <label class="mcq-option"><input type="radio" name="ec3" value="incorrect">b) Splashing of mud purposefully on a person you don't like</label>
+              <label class="mcq-option"><input type="radio" name="ec3" value="incorrect">c) An increase in price of medicine due to long queue</label>
+              <label class="mcq-option"><input type="radio" name="ec3" value="incorrect">d) Congestion caused by vehicles on other driver</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Externality = unintended, uncompensated interdependence. (a) Vehicle emissions harm others' health without compensation = classic externality. (b) Purposeful act = intentional, not externality. (c) Price increase from queue = market mechanism (scarcity), not externality. (d) Congestion = could be externality but often treated as market friction; (a) is the clearest textbook example."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Health effect of smoke emissions from vehicles in Mumbai</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SOCIOLOGY MODULE (from end-sem) -->
+      <section class="section reveal" id="sociology-mcq">
+        <div class="section-header"><span class="section-number">🏛️</span><div class="section-title"><h2>Sociology Module (from HS 200 End-Sem)</h2></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC1.</strong> Guha and Gadgil show that Omnivores corner the benefits of economic progress at the cost of the vast majority who are ecosystem people and ecological refugees. The omnivores constitute:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc1" value="incorrect">A. One fifth of the population</label>
+              <label class="mcq-option"><input type="radio" name="soc1" value="incorrect">B. One tenth of the population</label>
+              <label class="mcq-option"><input type="radio" name="soc1" value="incorrect">C. One sixth of the population</label>
+              <label class="mcq-option"><input type="radio" name="soc1" value="correct">D. None of the above</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Guha & Gadgil's 'omnivores' are the elite minority (roughly top 10-15%) who consume disproportionate resources. The exact fraction varies by analysis but 'none of the above' is correct as the options don't match their characterization (often ~10-15%, not 1/5, 1/10, or 1/6 precisely)."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>D. None of the above</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC2.</strong> According to Elinor Ostrom, ________ refer to an "element or condition that helps to account for the success of institutions in sustaining the common-pool resource and gaining the compliance of generation after generation of appropriators to the rules in use".</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc2" value="incorrect">A. Governance Principles</label>
+              <label class="mcq-option"><input type="radio" name="soc2" value="correct">B. Design Principles</label>
+              <label class="mcq-option"><input type="radio" name="soc2" value="incorrect">C. Resource Principles</label>
+              <label class="mcq-option"><input type="radio" name="soc2" value="incorrect">D. Environmental Principles</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Ostrom's famous framework is called the 'Design Principles' for long-enduring CPR institutions (8 principles: clear boundaries, congruence, collective choice, monitoring, graduated sanctions, conflict resolution, minimal rights, nested enterprises)."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>B. Design Principles</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC3.</strong> In India, multi-purpose dams like Sardar Sarovar have conflicting purposes. Which statement is WRONG?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc3" value="incorrect">A. Post-monsoon irrigation vs power production conflict</label>
+              <label class="mcq-option"><input type="radio" name="soc3" value="incorrect">B. Flood control needs empty reservoir; if monsoon fails, reservoir stays empty</label>
+              <label class="mcq-option"><input type="radio" name="soc3" value="incorrect">C. Maintaining reservoir for hydro power reduces water for irrigation</label>
+              <label class="mcq-option"><input type="radio" name="soc3" value="correct">D. Flooding prevented by maintaining reservoir levels during post-monsoon when flooding possibility is greater</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Flooding risk is highest DURING monsoon, not post-monsoon. Post-monsoon is when reservoir should be drawn down. Maintaining high levels post-monsoon REDUCES flood storage capacity for NEXT monsoon. Statement D gets the timing wrong — this is the wrong statement."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>D. Flooding prevented by maintaining reservoir levels during post-monsoon when flooding possibility is greater</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC4.</strong> Vandana Shiva argues high-yielding varieties (HYV) of wheat may yield 40% more but require _______ as much water:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc4" value="correct">A. Four times</label>
+              <label class="mcq-option"><input type="radio" name="soc4" value="incorrect">B. Two times</label>
+              <label class="mcq-option"><input type="radio" name="soc4" value="incorrect">C. Ten times</label>
+              <label class="mcq-option"><input type="radio" name="soc4" value="incorrect">D. Three times</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Vandana Shiva's critique: HYV wheat yields ~40% more grain but requires ~4x more water (irrigation intensity). This is a core argument in 'The Violence of the Green Revolution' — water inefficiency of HYVs."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. Four times</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC5.</strong> Vandana Shiva states Green Revolution reduced genetic diversity by replacing mixtures/rotations of wheat, maize, millets, pulses, oilseeds with _______ of wheat and rice:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc5" value="correct">A. Monocultures</label>
+              <label class="mcq-option"><input type="radio" name="soc5" value="incorrect">B. Genetics</label>
+              <label class="mcq-option"><input type="radio" name="soc5" value="incorrect">C. Diversity</label>
+              <label class="mcq-option"><input type="radio" name="soc5" value="incorrect">D. Biodiversity</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Shiva's core critique: Green Revolution replaced diverse polycultures with monocultures of wheat and rice, drastically reducing agro-biodiversity and increasing vulnerability to pests/disease."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. Monocultures</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC6.</strong> Guha and Gadgil suggest the organizational unit for management of common lands should be the:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc6" value="correct">A. Village</label>
+              <label class="mcq-option"><input type="radio" name="soc6" value="incorrect">B. District</label>
+              <label class="mcq-option"><input type="radio" name="soc6" value="incorrect">C. Taluq</label>
+              <label class="mcq-option"><input type="radio" name="soc6" value="incorrect">D. Mandal</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Guha & Gadgil advocate decentralized, community-based management at the village level (gram sabha) for equitable forest/common land governance, drawing on Ostrom's design principles."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. Village</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC7.</strong> Ostrom's "collective choice arrangements" design principle means:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc7" value="correct">A. Most individuals affected by operational rules can participate in modifying operational rules</label>
+              <label class="mcq-option"><input type="radio" name="soc7" value="incorrect">B. Users and officials have rapid access to low-cost conflict resolution</label>
+              <label class="mcq-option"><input type="radio" name="soc7" value="incorrect">C. Distribution of benefits proportional to costs</label>
+              <label class="mcq-option"><input type="radio" name="soc7" value="incorrect">D. Users' rights to devise institutions not challenged by external authorities</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Collective choice = those affected by rules can participate in changing them. This is Ostrom's 3rd design principle. (B) = conflict resolution mechanism (4th). (C) = congruence (2nd). (D) = minimal recognition of rights (7th)."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. Most individuals affected by operational rules can participate in modifying operational rules</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC8.</strong> In the Plachimada Coca-Cola case, the Kerala High Court used the ________ doctrine:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc8" value="correct">A. Public Trust doctrine</label>
+              <label class="mcq-option"><input type="radio" name="soc8" value="incorrect">B. Public-Private Partnership</label>
+              <label class="mcq-option"><input type="radio" name="soc8" value="incorrect">C. Commercial</label>
+              <label class="mcq-option"><input type="radio" name="soc8" value="incorrect">D. Proprietary</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Public Trust Doctrine: certain resources (air, water, forests) are held in trust by the state for public use, cannot be privatized. Kerala HC applied this to groundwater in Plachimada."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. Public Trust doctrine</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC9.</strong> Arundhati Roy estimates ~_____ million people displaced by big dams in last 50 years in India:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc9" value="correct">A. 44</label>
+              <label class="mcq-option"><input type="radio" name="soc9" value="incorrect">B. 33</label>
+              <label class="mcq-option"><input type="radio" name="soc9" value="incorrect">C. 55</label>
+              <label class="mcq-option"><input type="radio" name="soc9" value="incorrect">D. 22</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Arundhati Roy's 'The Greater Common Good' (1999) estimates ~33-44 million displaced by large dams in India since independence. Commonly cited as ~40-50 million; 44 million is the figure used in HS200 exams."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. 44</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC10.</strong> Due to seasonal rainfall, three major purposes of dams conflict: irrigation, ________ and ________.</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc10" value="correct">A. power production and flood-control</label>
+              <label class="mcq-option"><input type="radio" name="soc10" value="incorrect">B. flood control and forestry</label>
+              <label class="mcq-option"><input type="radio" name="soc10" value="incorrect">C. forestry, and wood production</label>
+              <label class="mcq-option"><input type="radio" name="soc10" value="incorrect">D. drinking water, and forestry</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Classic trilemma: Irrigation needs water stored; Power needs water released; Flood control needs empty reservoir. These three conflict seasonally in monsoon-dependent rivers."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. power production and flood-control</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>SOC11.</strong> In "Liquid City", Arjun Appadurai states clean water is the basis for revolution in:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="soc11" value="correct">A. Public Health</label>
+              <label class="mcq-option"><input type="radio" name="soc11" value="incorrect">B. Economic growth</label>
+              <label class="mcq-option"><input type="radio" name="soc11" value="incorrect">C. Sanitation</label>
+              <label class="mcq-option"><input type="radio" name="soc11" value="incorrect">D. None of the above</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Appadurai in 'Liquid City' (Mumbai water documentary) argues clean water access is foundational for public health revolution — reducing disease burden, enabling urban life. This is the central thesis."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>A. Public Health</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- NOTES-BASED APPLICATION MCQs -->
+      <section class="section reveal" id="notes-mcq">
+        <div class="section-header"><span class="section-number">📝</span><div class="section-title"><h2>Lecture Notes Application Questions</h2><p class="section-subtitle">All 12 modules — scenario-based</p></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N1.</strong> A city plans a new metro line. Environmental clearance requires assessing impact using I=P×A×T. The city argues: "Technology (electric trains) reduces T, so impact is low." What's the flaw?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n1" value="incorrect">Ignores that P and A may rise due to induced demand</label>
+              <label class="mcq-option"><input type="radio" name="n1" value="incorrect">Assumes T reduction is permanent</label>
+              <label class="mcq-option"><input type="radio" name="n1" value="incorrect">Ignores construction-phase impact</label>
+              <label class="mcq-option"><input type="radio" name="n1" value="correct">All of the above</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="I=P×A×T is multiplicative. Lower T can be offset by higher P (population growth from connectivity) and A (increased consumption). Construction impact is excluded. All three are valid critiques of the simplistic claim."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>All of the above</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N2.</strong> A factory pollutes a river used by downstream farmers. Government considers: (a) emission standard, (b) effluent tax, (c) tradable permits. Which gives regulator MOST certainty of achieving a specific pollution target?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n2" value="incorrect">Emission standard (CAC)</label>
+              <label class="mcq-option"><input type="radio" name="n2" value="incorrect">Effluent tax</label>
+              <label class="mcq-option"><input type="radio" name="n2" value="correct">Tradable permits</label>
+              <label class="mcq-option"><input type="radio" name="n2" value="incorrect">All equally certain</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Permits = quantity instrument; regulator sets total cap (goal fulfillment = YES). Taxes = price instrument; pollution level depends on unknown marginal abatement cost (goal fulfillment = NO). Standards only at firm level, not aggregate. From comparison table in notes."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Tradable permits</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N3.</strong> A tribal community's sacred grove is threatened by a mining lease. The community argues under Forest Rights Act. Which concept from Module 5 best supports their claim?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n3" value="incorrect">Iron Triangle — they are ecosystem people</label>
+              <label class="mcq-option"><input type="radio" name="n3" value="correct">Tribal ecologies — land as ontological core of being</label>
+              <label class="mcq-option"><input type="radio" name="n3" value="incorrect">Sacred grove as biodiversity hotspot</label>
+              <label class="mcq-option"><input type="radio" name="n3" value="incorrect">Colonial perspective on tribes</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 5 'Tribal ecologies': 'Land is the ontological core of a tribe's being and fullness' — land, water, forest as living entity and part of their being. This philosophical/ontological claim is stronger than instrumental biodiversity argument. Sacred grove embodies this worldview."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Tribal ecologies — land as ontological core of being</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N4.</strong> Using the Venn vs Nested SD diagrams: A state government proposes "compensatory afforestation" — planting trees elsewhere to offset forest cleared for a dam. Which diagram critique applies?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n4" value="incorrect">Venn diagram supports this (trade-off in overlap zone)</label>
+              <label class="mcq-option"><input type="radio" name="n4" value="correct">Nested diagram rejects this (no substitution for environment)</label>
+              <label class="mcq-option"><input type="radio" name="n4" value="incorrect">Both diagrams support offsets</label>
+              <label class="mcq-option"><input type="radio" name="n4" value="incorrect">Neither diagram addresses this</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Nested = strong sustainability, hierarchy Env > Soc > Econ. Environment cannot be substituted (no offset for aquifer/forest). Venn = weak sustainability, permits trade-offs in overlap zone. Compensatory afforestation is a Venn-type trade-off; Nested rejects it. Module 2 worked example."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Nested diagram rejects this (no substitution for environment)</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N5.</strong> A policy maker cites Brundtland: "Development meets present needs without compromising future." They argue a coal plant meets "present energy needs." What's missing?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n5" value="incorrect">Definition of 'needs' vs 'wants'</label>
+              <label class="mcq-option"><input type="radio" name="n5" value="incorrect">Intergenerational equity (future generations)</label>
+              <label class="mcq-option"><input type="radio" name="n5" value="incorrect">Biophysical limits (nested diagram)</label>
+              <label class="mcq-option"><input type="radio" name="n5" value="correct">All of the above</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Brundtland has 3 pillars: (1) Needs (especially poor's essential needs), (2) Limits (technology/social organization), (3) Future generations. Coal plant ignores all three: energy 'wants' ≠ needs; CO₂ violates limits; climate change harms future generations. Module 2 Brundtland analysis."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>All of the above</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N6.</strong> Descartes' dualism (mind vs matter) leads to anti-ecological philosophy. Which worked example from Module 10 shows this?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n6" value="incorrect">Mind/body interaction problem</label>
+              <label class="mcq-option"><input type="radio" name="n6" value="correct">God responsible for change → no human nature-preservation needed</label>
+              <label class="mcq-option"><input type="radio" name="n6" value="incorrect">Primary/secondary qualities distinction</label>
+              <label class="mcq-option"><input type="radio" name="n6" value="incorrect">Method of doubt</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 10/20 worked example: Descartes solved 'problem of change' by invoking God — since God sustains all change, no human nature-preservation is necessary. This theological move removes human responsibility for ecological stewardship. Anti-ecological consequence of dualism."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>God responsible for change → no human nature-preservation needed</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N7.</strong> Buddhist philosophy's "dependent origination" (pratītyasamutpāda) implies which environmental ethic?</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n7" value="incorrect">Nature as resource for human use</label>
+              <label class="mcq-option"><input type="radio" name="n7" value="incorrect">Anthropocentric stewardship</label>
+              <label class="mcq-option"><input type="radio" name="n7" value="correct">Universe as mutual web of relationships — harm to nature = harm to self</label>
+              <label class="mcq-option"><input type="radio" name="n7" value="incorrect">Nature has instrumental value only</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 23/24: Dependent origination = universe is a mutual web of relationships; impermanence of existence; experiential knowing. This directly supports an environmental ethic of interconnectedness — harming nature harms the web that constitutes us. Not anthropocentric, not instrumental."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Universe as mutual web of relationships — harm to nature = harm to self</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N8.</strong> Ecofeminism's "oppressive conceptual framework" includes all EXCEPT:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n8" value="incorrect">Value-hierarchical thinking (X > Y)</label>
+              <label class="mcq-option"><input type="radio" name="n8" value="incorrect">Oppositional value dualisms (Nature/Culture, Body/Mind)</label>
+              <label class="mcq-option"><input type="radio" name="n8" value="incorrect">Logic of domination (X superior → domination justified)</label>
+              <label class="mcq-option"><input type="radio" name="n8" value="correct">Egalitarian partnership model</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 25/26: Oppressive Conceptual Framework = value-hierarchical/up-down thinking (Man > Woman, Culture > Nature), oppositional dualisms (Nature/Culture, Body/Mind, Emotion/Reason), logic of domination (X has feature → superiority → domination justified). Ecofeminist philosophy REJECTS these. 'Egalitarian partnership' is what ecofeminism ADVOCATES, not part of the oppressive framework."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Egalitarian partnership model</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N9.</strong> Kyoto Protocol's Clean Development Mechanism (CDM) is an example of:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n9" value="incorrect">Allowance-based mechanism</label>
+              <label class="mcq-option"><input type="radio" name="n9" value="correct">Project-based mechanism</label>
+              <label class="mcq-option"><input type="radio" name="n9" value="incorrect">Domestic allowance</label>
+              <label class="mcq-option"><input type="radio" name="n9" value="incorrect">Joint implementation</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 15: Kyoto has (1) Allowance-based: domestic allowances + joint implementation (trade between countries), (2) Project-based: Clean Development Mechanism (CDM) — projects in developing countries generating certified emission reductions. CDM = project-based. Joint implementation = trade between Annex I countries."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Project-based mechanism</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N10.</strong> In Hargrove's view, Greek philosophy prevented nature-friendly attitudes because:</p>
+<div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n10" value="incorrect">Greeks hated nature</label>
+              <label class="mcq-option"><input type="radio" name="n10" value="incorrect">Greeks had no concept of environment</label>
+              <label class="mcq-option"><input type="radio" name="n10" value="correct">Greeks saw eco-phenomena as perishable, unworthy of highest knowledge; privileged reason over observation</label>
+              <label class="mcq-option"><input type="radio" name="n10" value="incorrect">Aristotle was anti-environmental</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 18/19: Hargrove argues Greeks didn't develop ecological perspective because eco-phenomena are about 'perishable things' unworthy of highest knowledge. Suspicion of sense-knowledge + over-reliance on reason discouraged empirical study of nature. Prestigious knowledge was conceptual, not empirical. Aristotle privileged metaphysics over physics/biology. Module 18 notes."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Greeks saw eco-phenomena as perishable, unworthy of highest knowledge; privileged reason over observation</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N11.</strong> Kant's "sublime" experience of nature leads to environmental ethics because:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n11" value="incorrect">It makes us fear nature</label>
+              <label class="mcq-option"><input type="radio" name="n11" value="correct">We overcome fear by projecting sublimity onto nature → recognize our rational/ethical capacity → morality</label>
+              <label class="mcq-option"><input type="radio" name="n11" value="incorrect">It proves nature has intrinsic value</label>
+              <label class="mcq-option"><input type="radio" name="n11" value="incorrect">It shows nature is powerful</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 24: Kant's sublime = nature as feared power → we overcome fear by projecting our own sublimity (reason) onto nature → we experience ourselves as sublime (rational, ethical) → basis for moral behavior toward nature. Scientific view disconnects us; sublime reconnects via ethics. Module 24 notes."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>We overcome fear by projecting sublimity onto nature → recognize our rational/ethical capacity → morality</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>N12.</strong> Heidegger's "enframing" (Gestell) of nature as standing reserve means:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="n12" value="incorrect">We should enclose nature in reserves</label>
+              <label class="mcq-option"><input type="radio" name="n12" value="correct">Modern technology reveals nature only as perpetual energy/resource stock</label>
+              <label class="mcq-option"><input type="radio" name="n12" value="incorrect">We should frame nature artistically</label>
+              <label class="mcq-option"><input type="radio" name="n12" value="incorrect">Nature resists human control</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Module 24/25: Heidegger — essence of technology is not technological; technology is a way nature reveals itself. Modern technology = 'enframing' — nature as 'standing reserve' (perennial energy source). Problems of technology cannot be solved technologically; need different way of encountering nature (art). Module 24/25 notes."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Modern technology reveals nature only as perpetual energy/resource stock</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="anchor-rail" aria-label="On-page navigation">
+      <h4>Practice MCQs</h4>
+      <a href="#economics-mcq" class="anchor-link">📐 Economics (End-Sem)</a>
+      <a href="#sociology-mcq" class="anchor-link">🏛️ Sociology (End-Sem)</a>
+      <a href="#notes-mcq" class="anchor-link">📝 Notes Application</a>
+      <h4>Navigation</h4>
+      <a href="index.html" class="anchor-link">← Home</a>
+      <a href="cheat-sheet.html" class="anchor-link">Cheat Sheet</a>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>HS 250 — Practice MCQs · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

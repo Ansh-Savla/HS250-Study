@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Triangle & Tribal Ecologies</title>
+<style>
+  :root {
+    --text-primary: #1a1a18;
+    --text-secondary: #5f5e5a;
+    --text-tertiary: #88877f;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f5f0;
+    --bg-tertiary: #eeedeb;
+    --border: rgba(0,0,0,0.15);
+    --border-hover: rgba(0,0,0,0.3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #e8e6de;
+      --text-secondary: #b4b2a9;
+      --text-tertiary: #888780;
+      --bg-primary: #1a1a18;
+      --bg-secondary: #2c2c2a;
+      --bg-tertiary: #3d3d3a;
+      --border: rgba(255,255,255,0.15);
+      --border-hover: rgba(255,255,255,0.3);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-tertiary); display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; }
+  .card { background: var(--bg-primary); border-radius: 16px; padding: 32px; max-width: 780px; width: 100%; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  h1 { font-size: 18px; font-weight: 500; color: var(--text-primary); margin-bottom: 8px; }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; }
+  svg { width: 100%; height: auto; }
+
+  .t  { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); }
+  .ts { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; fill: var(--text-secondary); }
+  .th { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); font-weight: 500; }
+  .box { fill: var(--bg-secondary); stroke: var(--border); stroke-width: 0.5px; }
+  .arr { stroke: var(--text-secondary); stroke-width: 1.5px; fill: none; }
+  .leader { stroke: var(--text-tertiary); stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
+  .node { cursor: pointer; transition: opacity 0.15s; }
+  .node:hover { opacity: 0.82; }
+
+  .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #E1F5EE; stroke: #0F6E56; }
+  .c-teal > .th, .c-teal > text.th { fill: #085041; }
+  .c-teal > .ts, .c-teal > text.ts { fill: #0F6E56; }
+  .c-teal > .t,  .c-teal > text.t  { fill: #085041; }
+
+  .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #FAEEDA; stroke: #854F0B; }
+  .c-amber > .th, .c-amber > text.th { fill: #633806; }
+  .c-amber > .ts, .c-amber > text.ts { fill: #854F0B; }
+  .c-amber > .t,  .c-amber > text.t  { fill: #633806; }
+
+  .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #FAECE7; stroke: #993C1D; }
+  .c-coral > .th, .c-coral > text.th { fill: #712B13; }
+  .c-coral > .ts, .c-coral > text.ts { fill: #993C1D; }
+  .c-coral > .t,  .c-coral > text.t  { fill: #712B13; }
+
+  .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #FBEAF0; stroke: #993556; }
+  .c-pink > .th, .c-pink > text.th { fill: #72243E; }
+  .c-pink > .ts, .c-pink > text.ts { fill: #993556; }
+  .c-pink > .t,  .c-pink > text.t  { fill: #72243E; }
+
+  .c-purple > rect, .c-purple > circle, .c-purple > ellipse { fill: #EEEDFE; stroke: #534AB7; }
+  .c-purple > .th, .c-purple > text.th { fill: #3C3489; }
+  .c-purple > .ts, .c-purple > text.ts { fill: #534AB7; }
+  .c-purple > .t,  .c-purple > text.t  { fill: #3C3489; }
+
+  @media (prefers-color-scheme: dark) {
+    .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #085041; stroke: #5DCAA5; }
+    .c-teal > .th, .c-teal > text.th { fill: #9FE1CB; }
+    .c-teal > .ts, .c-teal > text.ts { fill: #5DCAA5; }
+
+    .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #633806; stroke: #EF9F27; }
+    .c-amber > .th, .c-amber > text.th { fill: #FAC775; }
+    .c-amber > .ts, .c-amber > text.ts { fill: #EF9F27; }
+
+    .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #712B13; stroke: #F0997B; }
+    .c-coral > .th, .c-coral > text.th { fill: #F5C4B3; }
+    .c-coral > .ts, .c-coral > text.ts { fill: #F0997B; }
+
+    .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #72243E; stroke: #ED93B1; }
+    .c-pink > .th, .c-pink > text.th { fill: #F4C0D1; }
+    .c-pink > .ts, .c-pink > text.ts { fill: #ED93B1; }
+
+    .c-purple > rect, .c-purple > circle, .c-purple > ellipse { fill: #3C3489; stroke: #AFA9EC; }
+    .c-purple > .th, .c-purple > text.th { fill: #CECBF6; }
+    .c-purple > .ts, .c-purple > text.ts { fill: #AFA9EC; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Iron Triangle & Tribal Ecologies</h1>
+  <p class="subtitle">Power, people, and nature in environmental governance</p>
+  <svg width="100%" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+
+    <!-- Iron Triangle: Three groups -->
+    <text class="th" x="340" y="40" text-anchor="middle">Iron Triangle Approach</text>
+    <text class="ts" x="340" y="58" text-anchor="middle">Power structure in environmental decision-making</text>
+
+    <!-- Three vertices -->
+    <g class="node c-coral">
+      <rect x="40" y="80" width="180" height="100" rx="8" stroke-width="0.5"/>
+      <text class="th" x="130" y="105" text-anchor="middle" dominant-baseline="central">Resource Omnivores</text>
+      <text class="ts" x="130" y="128" text-anchor="middle" dominant-baseline="central">Politicians & bureaucrats</text>
+      <text class="ts" x="130" y="146" text-anchor="middle" dominant-baseline="central">Use public resources for</text>
+      <text class="ts" x="130" y="164" text-anchor="middle" dominant-baseline="central">patronage to industry,</text>
+      <text class="ts" x="130" y="182" text-anchor="middle" dominant-baseline="central">large landowners, urban middle class</text>
+    </g>
+
+    <g class="node c-teal">
+      <rect x="250" y="80" width="180" height="100" rx="8" stroke-width="0.5"/>
+      <text class="th" x="340" y="105" text-anchor="middle" dominant-baseline="central">Ecosystem People</text>
+      <text class="ts" x="340" y="128" text-anchor="middle" dominant-baseline="central">Rely directly on</text>
+      <text class="ts" x="340" y="146" text-anchor="middle" dominant-baseline="central">natural resources</text>
+      <text class="ts" x="340" y="164" text-anchor="middle" dominant-baseline="central">for livelihood & survival</text>
+      <text class="ts" x="340" y="182" text-anchor="middle" dominant-baseline="central">Traditional communities</text>
+    </g>
+
+    <g class="node c-pink">
+      <rect x="460" y="80" width="180" height="100" rx="8" stroke-width="0.5"/>
+      <text class="th" x="550" y="105" text-anchor="middle" dominant-baseline="central">Ecological Refugees</text>
+      <text class="ts" x="550" y="128" text-anchor="middle" dominant-baseline="central">Displaced, evicted,</text>
+      <text class="ts" x="550" y="146" text-anchor="middle" dominant-baseline="central">resettled, impoverished</text>
+      <text class="ts" x="550" y="164" text-anchor="middle" dominant-baseline="central">urban migrants</text>
+      <text class="ts" x="550" y="182" text-anchor="middle" dominant-baseline="central">Victims of development</text>
+    </g>
+
+    <!-- Arrows between vertices -->
+    <path class="arr" d="M220 130 L250 130" marker-end="url(#arrow)" stroke="#B8860B" stroke-width="2"/>
+    <path class="arr" d="M430 130 L460 130" marker-end="url(#arrow)" stroke="#B8860B" stroke-width="2"/>
+    <path class="arr" d="M340 180 L340 210" marker-end="url(#arrow)" stroke="#B8860B" stroke-width="2"/>
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+    <text class="ts" x="235" y="120" text-anchor="middle" fill="#B8860B" font-weight="600" font-size="10">Patronage</text>
+    <text class="ts" x="445" y="120" text-anchor="middle" fill="#B8860B" font-weight="600" font-size="10">Support</text>
+    <text class="ts" x="320" y="200" text-anchor="middle" fill="#B8860B" font-weight="600" font-size="10">Displacement</text>
+
+    <!-- Tribal Ecologies -->
+    <text class="th" x="340" y="230" text-anchor="middle">Tribal Ecologies: Key Principles</text>
+
+    <g class="node c-teal">
+      <rect x="40" y="250" width="280" height="120" rx="8" stroke-width="0.5"/>
+      <text class="th" x="180" y="275" text-anchor="middle" dominant-baseline="central">Land as Ontological Core</text>
+      <text class="ts" x="180" y="300" text-anchor="middle" dominant-baseline="central">• Bedrock of tribal identity</text>
+      <text class="ts" x="180" y="320" text-anchor="middle" dominant-baseline="central">• Land, water, forest = living entity</text>
+      <text class="ts" x="180" y="340" text-anchor="middle" dominant-baseline="central">• Part of their being, not property</text>
+    </g>
+
+    <g class="node c-amber">
+      <rect x="360" y="250" width="280" height="120" rx="8" stroke-width="0.5"/>
+      <text class="th" x="500" y="275" text-anchor="middle" dominant-baseline="central">Territory = Holistic</text>
+      <text class="ts" x="500" y="300" text-anchor="middle" dominant-baseline="central">Hills, rivers, minerals, air, water, people</text>
+      <text class="ts" x="500" y="320" text-anchor="middle" dominant-baseline="central">Intrinsic symbiotic connection</text>
+      <text class="ts" x="500" y="340" text-anchor="middle" dominant-baseline="central">Identity–land–territory–nature</text>
+    </g>
+
+    <!-- Two ways to explore -->
+    <text class="th" x="340" y="395" text-anchor="middle">Two Ways to Explore Tribal–Nature Relations</text>
+    <g class="node c-purple">
+      <rect x="40" y="415" width="280" height="90" rx="8" stroke-width="0.5"/>
+      <text class="th" x="180" y="435" text-anchor="middle" dominant-baseline="central">1. Culture</text>
+      <text class="ts" x="180" y="455" text-anchor="middle" dominant-baseline="central">Riddles, stories, myths, legends</text>
+      <text class="ts" x="180" y="475" text-anchor="middle" dominant-baseline="central">Feasts, festivals → nature articulation</text>
+    </g>
+
+    <g class="node c-pink">
+      <rect x="360" y="415" width="280" height="90" rx="8" stroke-width="0.5"/>
+      <text class="th" x="500" y="435" text-anchor="middle" dominant-baseline="central">2. Livelihood</text>
+      <text class="ts" x="500" y="455" text-anchor="middle" dominant-baseline="central">Day-to-day existence with nature</text>
+      <text class="ts" x="500" y="475" text-anchor="middle" dominant-baseline="central">Resource use, subsistence practices</text>
+    </g>
+
+    <!-- Sacred groves & Colonial rupture -->
+    <text class="th" x="340" y="520" text-anchor="middle">Sacred Groves & Colonial Rupture</text>
+    <g class="c-teal">
+      <text class="ts" x="80" y="545" dominant-baseline="central">• Sacred grove = dense trees = abode of guardian spirit</text>
+      <text class="ts" x="80" y="565" dominant-baseline="central">• Colonial forest policy ruptured nature–society harmony</text>
+      <text class="ts" x="80" y="585" dominant-baseline="central">• Post-colonial: nature = terrain of politicization</text>
+    </g>
+
+  </svg>
+</div>
+</body>
+</html>

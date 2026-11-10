@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 6 — Environmental Economics | HS 250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" style="--progress: 0%"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand-link">
+      <span class="brand-mark">🌿</span>
+      <span>HS 250 Study Site</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cheat-sheet.html" class="nav-link">Cheat Sheet</a>
+      <a href="practice.html" class="nav-link">Practice MCQs</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </header>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <section class="hero reveal">
+        <div class="hero-meta">
+          <span class="pill pill-week">Module 06</span>
+          <span class="pill pill-module">Economics</span>
+          <span class="pill pill-type">Core Theory</span>
+        </div>
+        <h1>Environmental Economics: I=P×A×T, Externalities & Policy</h1>
+        <p class="hero-lead">The economic framework for environmental problems: IPAT identity, public goods, externalities, Coase theorem, and policy instruments.</        </p>
+
+        <div class="goals-panel">
+          <div class="goal-card"><strong>By the end</strong><p>Apply I=P×A×T to any environmental problem and identify leverage points.</p></div>
+          <div class="goal-card"><strong>Explain</strong><p>Why environmental problems occur: public goods, tragedy of commons, prisoner's dilemma.</p></div>
+          <div class="goal-card"><strong>Classify</strong><p>Externalities: positive/negative, depletable/non-depletable; private vs social costs.</p></div>
+          <div class="goal-card"><strong>Evaluate</strong><p>Policy instruments: CAC vs market-based (taxes, permits, subsidies); Coase theorem.</p></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="ipat">
+        <div class="section-header"><span class="section-number">01</span><div class="section-title"><h2>I = P × A × T: The Environmental Impact Identity</h2><p class="section-subtitle">Decomposing environmental impact into three multiplicative factors</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>I (Impact) = P (Population) × A (Affluence/Consumption per person) × T (Technology/Impact per unit consumption)</strong><br>
+            All three factors multiply — no single factor is sufficient alone. Reducing any factor reduces total impact.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> Household waste = (Number of people) × (Consumption per person) × (Packaging per unit). You can reduce waste by fewer people, less consumption, or less packaging — but all three matter.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/ipat-formula.html" title="I = P × A × T Formula" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 1: IPAT identity — three multiplicative drivers of environmental impact</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Urban Air Pollution</h4>
+            <ol>
+              <li><strong>P:</strong> City population growing 2%/year → more vehicles, more energy demand</li>
+              <li><strong>A:</strong> Rising income → more cars per household, more AC, more consumption</li>
+              <li><strong>T:</strong> Vehicle efficiency improving (lower T), but Jevons paradox: efficiency → more driving</li>
+              <li><strong>Policy:</strong> Target all three: public transit (↓A), emission standards (↓T), urban planning (↓P pressure)</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "IPAT is not a prediction — it's an accounting identity. Any environmental policy must address at least one factor; ignoring any factor guarantees failure."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Technology will save us" (T↓ solves everything). Jevons Paradox: efficiency gains often increase total consumption. Also, T can be >1 (dirty tech) or <1 (clean tech) — not automatically good.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: IPAT factors with one policy lever each</summary>
+            <div class="recall-content">
+              <ol>
+                <li>P = Population → family planning, women's education, urban planning</li>
+                <li>A = Affluence/Consumption → carbon tax, circular economy, sufficiency</li>
+                <li>T = Technology/Impact per unit → efficiency standards, clean tech, BAT</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="why-problems">
+        <div class="section-header"><span class="section-number">02</span><div class="section-title"><h2>Why Environmental Problems Occur</h2><p class="section-subtitle">Public goods, tragedy of commons, prisoner's dilemma, externalities</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Public goods:</strong> Non-excludable + non-rival (clean air) OR rival (fisheries = tragedy of commons).<br>
+            <strong>Tragedy of commons:</strong> Open access + self-interest > social interest → overexploitation.<br>
+            <strong>Prisoner's dilemma:</strong> Individual rationality → collective irrationality (both confess).<br>
+            <strong>Externalities:</strong> Uncompensated interdependence — private cost ≠ social cost.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A village pasture. Each herder adds one more cow (private benefit), but the cost (grass depletion) is shared. Individually rational → collectively ruinous. This is the tragedy of commons = prisoner's dilemma = negative externality.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Concept</th><th>Key Insight</th><th>Policy Response</th></tr></thead>
+              <tbody>
+                <tr><td>Pure public good</td><td>Non-excludable, non-rival</td><td>Government provision</td></tr>
+                <tr><td>Tragedy of commons</td><td>Rival but non-excludable</td><td>Property rights, quotas, permits</td></tr>
+                <tr><td>Prisoner's dilemma</td><td>Individual rationality → collective loss</td><td>Repeated games, institutions, norms</td></tr>
+                <tr><td>Negative externality</td><td>Social cost > Private cost</td><td>Tax, regulation, property rights</td></tr>
+                <tr><td>Positive externality</td><td>Social benefit > Private benefit</td><td>Subsidies, public provision</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Environmental problems are market failures: missing prices for nature's services, missing property rights for commons, and missing institutions for collective action."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Tragedy of commons" ≠ "commons are doomed." Ostrom showed communities CAN self-govern commons with design principles (clear boundaries, congruence, collective choice, monitoring, graduated sanctions, conflict resolution, minimal rights, nested enterprises).
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Why do env problems occur? (3 reasons)</summary>
+            <div class="recall-content">
+              <ol>
+                <li>Public goods → no price, no exclusion → under-provision/overuse</li>
+                <li>Externalities → private cost ≠ social cost → market failure</li>
+                <li>Prisoner's dilemma → individual rationality → collective ruin</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </section>
+
+
+      <section class="section reveal" id="goods-classification">
+        <div class="section-header"><span class="section-number">02b</span><div class="section-title"><h2>Goods Classification: Excludability & Subtractibility</h2><p class="section-subtitle">The 2×2 matrix defining public goods, commons, club goods, private goods</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Two key properties:</strong>
+            <ol>
+              <li><strong>Excludability:</strong> Can people be prevented from using the good? (Yes/No)</li>
+              <li><strong>Subtractibility (Rivalry):</strong> Does one person's use reduce availability for others? (Yes/No)</li>
+            </ol>
+            <strong>Subtractible = Rival. Non-subtractible = Non-rival.</strong>
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A cinema seat (excludable, subtractible), a public park (non-excludable, subtractible), cable TV (excludable, non-subtractible), clean air (non-excludable, non-subtractible).
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Excludable</th><th>Non-excludable</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Subtractible (Rival)</strong></td><td><strong>Private Goods</strong><br>Food, clothes, cars<br>Market works well</td><td><strong>Common Pool Resources (CPR)</strong><br>Fisheries, groundwater, pasture<br>Tragedy of commons</td></tr>
+                <tr><td><strong>Non-subtractible (Non-rival)</strong></td><td><strong>Club Goods</strong><br>Cable TV, toll roads, parks<br>Exclusion possible</td><td><strong>Pure Public Goods</strong><br>Clean air, ozone layer, national defense<br>Market failure → govt provision</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Classify These Goods</h4>
+            <ol>
+              <li><strong>City park (unfenced):</strong> Non-excludable, subtractible → CPR (congestion)</li>
+              <li><strong>City park (fenced, fee):</strong> Excludable, subtractible → Private/Club good</li>
+              <li><strong>National defense:</strong> Non-excludable, non-subtractible → Pure public good</li>
+              <li><strong>Cable TV:</strong> Excludable, non-subtractible → Club good</li>
+              <li><strong>Fishery (open access):</strong> Non-excludable, subtractible → CPR → Tragedy</li>
+              <li><strong>Knowledge (published):</strong> Non-excludable, non-subtractible → Public good</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Excludability + Subtractibility = 4 types of goods. Environmental problems cluster in CPR (non-excludable, subtractible) and pure public goods (non-excludable, non-subtractible) — both suffer from missing markets."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Public good" ≠ "government provided." Public good = non-excludable + non-subtractible. Many government services are NOT public goods (e.g., healthcare is excludable). Also: "subtractible" = "rival" = "rivalrous" — same concept, different words.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: 2×2 matrix with one example each</summary>
+            <div class="recall-content">
+              <table style="width:100%; border-collapse:collapse;">
+                <tr><th></th><th>Excludable</th><th>Non-excludable</th></tr>
+                <tr><td><strong>Subtractible</strong></td><td>Private goods (apple)</td><td>CPR (fishery)</td></tr>
+                <tr><td><strong>Non-subtractible</strong></td><td>Club goods (cable TV)</td><td>Public goods (clean air)</td></tr>
+              </table>
+              <p><strong>Env problems:</strong> CPR → tragedy of commons. Public goods → free rider / underprovision.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="section reveal" id="externalities">
+        <div class="section-header"><span class="section-number">03</span><div class="section-title"><h2>Externalities: Types, Costs & Classification</h2><p class="section-subtitle">Private vs social costs, positive/negative, depletable/non-depletable</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Externality:</strong> Unintended, uncompensated side effect of one's activity on another.<br>
+            <strong>Private cost:</strong> Direct cost to producer (fuel, maintenance).<br>
+            <strong>Social cost:</strong> Private cost + external cost (pollution health effects).<br>
+            <strong>Negative externality:</strong> Social cost > Private cost (pollution).<br>
+            <strong>Positive externality:</strong> Private cost > Social cost (R&D, vaccination, reforestation).<br>
+            <strong>Depletable:</strong> Use by one reduces availability for others (manure for fuel vs fertilizer).<br>
+            <strong>Non-depletable:</strong> Use by one doesn't reduce for others (air pollution, knowledge).
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A factory pollutes river. Private cost = treatment plant cost. Social cost = treatment + downstream health costs + fishery loss + recreation loss. Negative externality = social > private. If factory pays only private cost, it overproduces.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/policy-instruments.html" title="Externalities & Policy" loading="lazy"></iframe>
+            <p class="visual-caption">Figure: Externalities and policy instruments comparison</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: Vehicle Air Pollution</h4>
+            <ol>
+              <li><strong>Private cost:</strong> Fuel, maintenance, insurance</li>
+              <li><strong>External cost:</strong> Asthma cases, climate change, noise, congestion</li>
+              <li><strong>Social cost:</strong> Private + External</li>
+              <li><strong>Negative externality:</strong> Social > Private (driver doesn't pay for asthma)</li>
+              <li><strong>Non-depletable:</strong> My pollution doesn't reduce your ability to pollute</li>
+              <li><strong>Policy:</strong> Congestion charge, fuel tax, emission standards → internalize externality</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "An externality exists when social cost diverges from private cost. The policy goal: internalize the externality so the polluter faces the true social cost of their actions."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Positive externality" ≠ "good thing, no policy needed." Positive externalities (R&D, education, vaccination) are UNDER-provided by markets because producers can't capture full social benefit → need subsidies/public provision.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Classify externalities with examples</summary>
+            <div class="recall-content">
+              <p><strong>Negative:</strong> Social cost > Private (pollution, noise, congestion)<br>
+              <strong>Positive:</strong> Social benefit > Private (R&D, vaccination, education, reforestation)<br>
+              <strong>Depletable:</strong> Rival in externality (manure for fuel vs fertilizer)<br>
+              <strong>Non-depletable:</strong> Non-rival externality (air pollution, knowledge, noise)<br>
+              <strong>Key:</strong> Externalities = non-market interdependence</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="policy-instruments-econ">
+        <div class="section-header"><span class="section-number">04</span><div class="section-title"><h2>Policy Instruments: CAC vs Market-Based</h2><p class="section-subtitle">Coase theorem, polluter pays, standards vs taxes vs permits</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Coase Theorem:</strong> If property rights clear + transaction costs low → bargaining achieves efficient outcome regardless of initial allocation.<br>
+            <strong>Polluter Pays Principle:</strong> Polluter bears cost of pollution prevention/control.<br>
+            <strong>CAC (Command & Control):</strong> Standards (MINAS), bans, permits/quotas/licenses.<br>
+            <strong>Market-based:</strong> Taxes (effluent, product, input), tradable permits, subsidies, deposit-refund.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> CAC = speed limit (command). Tax = toll per km (price). Permit = limited driving passes (quantity). CAC = certain compliance, high cost. Tax = cost certainty, quantity uncertain. Permit = quantity certainty, price varies.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/policy-instruments.html" title="Policy Instruments Comparison" loading="lazy"></iframe>
+            <p class="visual-caption">Figure: CAC vs Taxes vs Permits — comparison across 7 criteria</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: SO₂ Allowance Trading (US Acid Rain Program)</h4>
+            <ol>
+              <li><strong>Cap:</strong> Total SO₂ allowances = environmental target</li>
+              <li><strong>Allowance:</strong> 1 ton SO₂/year, bankable, tradable</li>
+              <li><strong>Why worked:</strong> Wide cost differences (flexibility), simple rules, enforcement</li>
+              <li><strong>Result:</strong> 50% cost savings vs CAC; rapid innovation in scrubbers</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "No perfect instrument exists. CAC = administrative ease, goal certainty at firm level. Taxes = static/dynamic efficiency, revenue. Permits = aggregate goal certainty, market efficiency IF not too thin."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Permits are always better than taxes." Permits fail if market too thin (few traders). Taxes fail if optimal tax level unknown. CAC fails cost efficiency but easiest to administer. Context determines choice.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: CAC vs Taxes vs Permits — one pro/con each</summary>
+            <div class="recall-content">
+              <p><strong>CAC:</strong> Pro = admin ease, firm-level certainty. Con = no cost efficiency, high entry barriers<br>
+              <strong>Taxes:</strong> Pro = cost efficiency, revenue. Con = goal uncertainty (optimal tax unknown)<br>
+              <strong>Permits:</strong> Pro = aggregate goal certainty, cost efficiency. Con = hard to administer, thin market risk<br>
+              <strong>Polluter Pays:</strong> All three can satisfy IF permits auctioned</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="practice-m6">
+        <div class="section-header"><span class="section-number">🎯</span><div class="section-title"><h2>Module 6 Practice MCQs</h2></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M6-1.</strong> In the IPAT identity, if population grows 1%, affluence grows 2%, and technology improves (impact/unit drops) 1%, the net environmental impact change is approximately:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m6q1" value="incorrect">+2%</label>
+              <label class="mcq-option"><input type="radio" name="m6q1" value="correct">+2%</label>
+              <label class="mcq-option"><input type="radio" name="m6q1" value="incorrect">0%</label>
+              <label class="mcq-option"><input type="radio" name="m6q1" value="incorrect">-1%</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="IPAT is multiplicative: (1.01) × (1.02) × (0.99) ≈ 1.0202 → ~2% increase. All three multiply. Technology improvement of 1% is overwhelmed by P and A growth."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>+2%</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M6-2.</strong> A factory emits pollution harming downstream fishermen. The factory's private cost = ₹100/unit; social cost = ₹150/unit. This is:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m6q2" value="incorrect">Positive externality</label>
+              <label class="mcq-option"><input type="radio" name="m6q2" value="correct">Negative externality</label>
+              <label class="mcq-option"><input type="radio" name="m6q2" value="incorrect">No externality</label>
+              <label class="mcq-option"><input type="radio" name="m6q2" value="incorrect">Public good</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Social cost (₹150) > Private cost (₹100) → negative externality. The factory doesn't bear the full cost of its pollution (health, fishery loss), so it overproduces. Internalizing = making factory pay ₹150/unit."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Negative externality</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M6-3.</strong> Coase Theorem suggests that with well-defined property rights and low transaction costs:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m6q3" value="incorrect">Government must regulate pollution</label>
+              <label class="mcq-option"><input type="radio" name="m6q3" value="correct">Bargaining achieves efficient outcome regardless of initial rights allocation</label>
+              <label class="mcq-option"><input type="radio" name="m6q3" value="incorrect">Pollution will be eliminated completely</label>
+              <label class="mcq-option"><input type="radio" name="m6q3" value="incorrect">Taxes are always better than permits</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Coase: if property rights clear + transaction costs low, parties bargain to efficient outcome. Initial allocation affects distribution (who pays whom) but not efficiency. Real world: transaction costs high → Coase rarely applies directly."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Bargaining achieves efficient outcome regardless of initial rights allocation</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M6-4.</strong> Comparing CAC, Taxes, and Tradable Permits for achieving a specific pollution reduction target with certainty:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m6q4" value="incorrect">CAC (standards) best</label>
+              <label class="mcq-option"><input type="radio" name="m6q4" value="incorrect">Taxes best</label>
+              <label class="mcq-option"><input type="radio" name="m6q4" value="correct">Tradable Permits best</label>
+              <label class="mcq-option"><input type="radio" name="m6q4" value="incorrect">All equally certain</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Permits = quantity instrument; regulator sets total cap → goal fulfillment = YES. Taxes = price instrument; pollution level depends on unknown MAC → goal fulfillment = NO. CAC = firm-level only, not aggregate. From comparison table."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Tradable Permits best</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M6-5.</strong> The US SO₂ allowance trading program succeeded because:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m6q5" value="incorrect">Government set the price of allowances</label>
+              <label class="mcq-option"><input type="radio" name="m6q5" value="correct">Wide cost differences + flexible policy + straightforward implementation + enforcement</label>
+              <label class="mcq-option"><input type="radio" name="m6q5" value="incorrect">Only large firms participated</label>
+              <label class="mcq-option"><input type="radio" name="m6q5" value="incorrect">Allowances were non-tradable</label>
+            </div>
+            <div class="mcq-explanation" data-explanation="Key success factors: (1) Wide cost differences → gains from trade, (2) Flexible policy (banking, trading), (3) Straightforward implementation, (4) Provisions enforced. Allowances WERE tradable (bought, sold, banked). Government did NOT set price — market did."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Wide cost differences + flexible policy + straightforward implementation + enforcement</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="anchor-rail" aria-label="On-page navigation">
+      <h4>Module 06</h4>
+      <a href="#ipat" class="anchor-link">01 IPAT</a>
+      <a href="#why-problems" class="anchor-link">02 Why Problems Occur</a>
+      <a href="#goods-classification" class="anchor-link">02b Goods Classification</a>
+      <a href="#externalities" class="anchor-link">03 Externalities</a>
+      <a href="#policy-instruments-econ" class="anchor-link">04 Policy Instruments</a>
+      <a href="#practice-m6" class="anchor-link">🎯 Practice MCQs</a>
+      <h4>Navigation</h4>
+      <a href="index.html" class="anchor-link">← Home</a>
+      <a href="module-5-tribal.html" class="anchor-link">← Prev: Module 05</a>
+      <a href="module-7-pollution.html" class="anchor-link">Next: Module 07 →</a>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>HS 250 — Module 06: Environmental Economics · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

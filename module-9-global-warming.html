@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 9 — Global Warming & Kyoto | HS 250</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" style="--progress: 0%"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand-link">
+      <span class="brand-mark">🌿</span>
+      <span>HS 250 Study Site</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cheat-sheet.html" class="nav-link">Cheat Sheet</a>
+      <a href="practice.html" class="nav-link">Practice MCQs</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </header>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <section class="hero reveal">
+        <div class="hero-meta">
+          <span class="pill pill-week">Module 09</span>
+          <span class="pill pill-module">Climate/Policy</span>
+          <span class="pill pill-type">Global</span>
+        </div>
+        <h1>Global Warming & Kyoto Protocol</h1>
+        <p class="hero-lead">Climate science, UNFCCC, Kyoto mechanisms (allowance-based and project-based), and the architecture of international climate cooperation.</p>
+
+        <div class="goals-panel">
+          <div class="goal-card"><strong>By the end</strong><p>Explain the scientific basis: natural forcing insufficient for observed warming.</p></div>
+          <div class="goal-card"><strong>Detail</strong><p>Kyoto Protocol: targets, allowance-based (domestic, JI), project-based (CDM) mechanisms.</p></div>
+          <div class="goal-card"><strong>Analyze</strong><p>How Kyoto created first global carbon market and lessons for Paris Agreement.</p></div>
+          <div class="goal-card"><strong>Evaluate</strong><p>Effectiveness, equity, and evolution from Kyoto to Paris.</p></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="climate-science">
+        <div class="section-header"><span class="section-number">01</span><div class="section-title"><h2>Climate Science Basis</h2><p class="section-subtitle">IPCC finding: natural forcing alone cannot explain observed warming</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Key finding:</strong> "Natural forcing alone is unlikely to explain the recent observed global warming or the observed changes in vertical temperature structure of the atmosphere."<br>
+            <strong>Implication:</strong> Anthropogenic forcing (GHGs) is the dominant driver of recent warming.<br>
+            <strong>Vertical structure:</strong> Troposphere warming + stratosphere cooling = fingerprint of GHG forcing (not solar).
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> A fever patient. Natural causes (sun, volcanoes) = normal temperature variation. Persistent fever + specific symptom pattern (troposphere hot, stratosphere cold) = diagnosis: greenhouse gases.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/global-warming-kyoto.html" title="Global Warming Science" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 1: IPCC key finding and Kyoto mechanisms overview</p>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "The vertical temperature fingerprint — warming troposphere, cooling stratosphere — is the smoking gun: only greenhouse gases produce this pattern, not solar or volcanic forcing."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "Natural forcing = zero role." Natural forcing (solar, volcanic) contributes to variability but cannot explain the *trend* and *vertical pattern* since 1970s. It's not zero, it's insufficient.
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Key climate science finding</summary>
+            <div class="recall-content">
+              <p><strong>Finding:</strong> Natural forcing alone cannot explain observed warming + vertical temp structure<br>
+              <strong>Implication:</strong> Anthropogenic GHGs = dominant driver<br>
+              <strong>Fingerprint:</strong> Troposphere warms, stratosphere cools = GHG signature<br>
+              <strong>Contrast:</strong> Solar forcing would warm ALL layers</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="kyoto-mechanisms">
+        <div class="section-header"><span class="section-number">02</span><div class="section-title"><h2>Kyoto Protocol Mechanisms</h2><p class="section-subtitle">UNFCCC, targets, and three flexibility mechanisms</p></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>UNFCCC:</strong> Framework convention (1992) — stabilize GHG concentrations.<br>
+            <strong>Kyoto Protocol (1997):</strong> Annex I countries reduce emissions below 1990 levels (avg 5.2% by 2008-2012).<br>
+            <strong>Core principle:</strong> Common but differentiated responsibilities (CBDR).<br>
+            <strong>Three mechanisms:</strong> (1) Domestic allowances, (2) Joint Implementation (JI), (3) Clean Development Mechanism (CDM).
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> Kyoto = group diet plan. Targets = weight loss goals. Mechanisms = ways to meet goals: (1) Domestic = exercise yourself, (2) JI = trade workout sessions with gym buddy, (3) CDM = sponsor fitness program in developing country and count their calories burned.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/global-warming-kyoto.html" title="Kyoto Mechanisms" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 2: Kyoto Protocol — allowance-based and project-based mechanisms</p>
+          </div>
+
+          <div class="worked-box">
+            <h4>Worked Example: CDM Project — Indian Wind Farm</h4>
+            <ol>
+              <li><strong>Project:</strong> 50 MW wind farm in Tamil Nadu, India (non-Annex I)</li>
+              <li><strong>Baseline:</strong> Grid emission factor = 0.8 tCO₂/MWh (coal-heavy grid)</li>
+              <li><strong>Generation:</strong> 50 MW × 25% CF × 8760 h = 109,500 MWh/year</li>
+              <li><strong>CERs:</strong> 109,500 × 0.8 = 87,600 tCO₂/year = 87,600 CERs</li>
+              <li><strong>Buyer:</strong> German utility (Annex I) buys CERs to meet Kyoto target</li>
+              <li><strong>Benefit:</strong> Germany meets target cheaper; India gets clean energy investment</li>
+            </ol>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Kyoto's genius: it made carbon a tradable commodity. CDM let developed countries buy cheap reductions in developing countries, while transferring clean technology — but additionality verification remains the Achilles' heel."
+          </div>
+
+          <div class="trap-box">
+            <strong>Trap:</strong> "CDM = free money for developing countries." CDM requires ADDITIONALITY — project must not have happened anyway. Proving "would not have happened without CDM" is notoriously difficult. Many CDM projects failed additionality tests (e.g., hydro dams already planned).
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Kyoto's three mechanisms</summary>
+            <div class="recall-content">
+              <p><strong>1. Domestic allowances:</strong> Internal cap-and-trade within Annex I country<br>
+              <strong>2. Joint Implementation (JI):</strong> Annex I ↔ Annex I project (trade AAUs/ERUs)<br>
+              <strong>3. Clean Development Mechanism (CDM):</strong> Annex I ↔ non-Annex I project (CERs)<br>
+              <strong>Key:</strong> All create carbon market; CBDR = differentiated targets; US never ratified</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="kyoto-evaluation">
+        <div class="section-header"><span class="section-number">03</span><div class="section-title"><h2>Kyoto Evaluation & Legacy</h2></div></div>
+
+        <div class="concept-block">
+          <div class="def-box">
+            <strong>Achievements:</strong> First binding targets; created global carbon market; established MRV (measurement, reporting, verification); clean tech transfer via CDM.<br>
+            <strong>Shortcomings:</strong> US never ratified; Canada withdrew; developing countries no targets; hot air (surplus AAUs from Russia/Ukraine); CDM additionality failures.<br>
+            <strong>Legacy to Paris:</strong> Bottom-up NDCs (not top-down targets); universal participation; transparency framework; global stocktake; but carbon markets (Article 6) still unresolved.
+          </div>
+
+          <div class="analogy-box">
+            <strong>Analogy:</strong> Kyoto = first attempt at global climate treaty. Like Wright Flyer — proved flight possible, but not practical for daily use. Paris = modern airliner — universal, flexible, but still learning to fly.
+          </div>
+
+          <div class="visual-wrapper">
+            <iframe class="diagram-frame" src="diagrams/global-warming-kyoto.html" title="Kyoto Evaluation" loading="lazy"></iframe>
+            <p class="visual-caption">Figure 3: Kyoto mechanisms and evaluation</p>
+          </div>
+
+          <div class="exam-box">
+            <strong>Exam sentence:</strong> "Kyoto proved carbon markets work at scale, but its top-down architecture failed universality. Paris inverted the architecture — bottom-up NDCs with top-down transparency — but Article 6 carbon markets remain the unfinished business."
+          </div>
+
+          <details class="recall-check">
+            <summary class="recall-summary">60-second teach-back: Kyoto achievements vs shortcomings</summary>
+            <div class="recall-content">
+              <p><strong>Achievements:</strong> First binding targets; global carbon market; MRV framework; CDM tech transfer<br>
+              <strong>Shortcomings:</strong> US out; Canada out; no developing country targets; hot air (Russia/Ukraine AAUs); CDM additionality failures<br>
+              <strong>Paris difference:</strong> Bottom-up NDCs, universal, transparency, stocktake — but Article 6 unresolved</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section reveal" id="practice-m9">
+        <div class="section-header"><span class="section-number">🎯</span><div class="section-title"><h2>Module 9 Practice MCQs</h2></div></div>
+
+        <div class="mcq-grid">
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M9-1.</strong> The IPCC finding that "natural forcing alone is unlikely to explain recent observed global warming" implies:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m9q1" value="incorrect">Natural forcing plays no role in climate</label>
+              <label class="mcq-option"><input type="radio" name="m9q1" value="correct">Anthropogenic GHGs are the dominant driver of observed warming</label>
+              <label class="mcq-option"><input type="radio" name="m9q1" value="incorrect">Solar variability is the main driver</label>
+              <label class="mcq-option"><input type="radio" name="m9q1" value="incorrect">Volcanic activity explains the warming trend</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">IPCC: natural forcing (solar, volcanic) alone cannot explain the observed warming trend AND the vertical temperature pattern (troposphere warming + stratosphere cooling). This fingerprint is unique to GHG forcing. Natural forcing contributes to variability but not the trend."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Anthropogenic GHGs are the dominant driver of observed warming</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M9-2.</strong> Kyoto Protocol's Clean Development Mechanism (CDM) is an example of:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m9q2" value="incorrect">Allowance-based mechanism</label>
+              <label class="mcq-option"><input type="radio" name="m9q2" value="correct">Project-based mechanism</label>
+              <label class="mcq-option"><input type="radio" name="m9q2" value="incorrect">Domestic allowance</label>
+              <label class="mcq-option"><input type="radio" name="m9q2" value="incorrect">Joint implementation</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">Kyoto mechanisms: (1) Allowance-based: domestic allowances + joint implementation (Annex I ↔ Annex I trade). (2) Project-based: CDM (Annex I ↔ non-Annex I projects generating CERs). CDM = project-based. Joint implementation = trade between Annex I countries."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Project-based mechanism</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M9-3.</strong> Joint Implementation (JI) under Kyoto involves:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m9q3" value="incorrect">Projects in developing countries</label>
+              <label class="mcq-option"><input type="radio" name="m9q3" value="correct">Trade between Annex I countries</label>
+              <label class="mcq-option"><input type="radio" name="m9q3" value="incorrect">Domestic allowance trading</label>
+              <label class="mcq-option"><input type="radio" name="m9q3" value="incorrect">CDM projects</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">JI = Annex I country invests in emission reduction project in another Annex I country, earns ERUs (Emission Reduction Units). Both parties have Kyoto targets. CDM = Annex I invests in non-Annex I (no target), earns CERs. Domestic allowances = internal cap-and-trade."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Trade between Annex I countries</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M9-4.</strong> The "vertical temperature structure" fingerprint (troposphere warming + stratosphere cooling) is evidence for:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m9q4" value="incorrect">Solar forcing</label>
+              <label class="mcq-option"><input type="radio" name="m9q4" value="incorrect">Volcanic forcing</label>
+              <label class="mcq-option"><input type="radio" name="m9q4" value="correct">Greenhouse gas forcing</label>
+              <label class="mcq-option"><input type="radio" name="m9q4" value="incorrect">Natural variability</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">GHGs trap heat in troposphere (warming) but reduce radiation reaching stratosphere (cooling). Solar forcing would warm ALL layers. Volcanic aerosols cool surface but warm stratosphere (absorb radiation). Only GHGs produce this specific vertical fingerprint."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Greenhouse gas forcing</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+
+          <article class="mcq-card">
+            <p class="mcq-question"><strong>M9-5.</strong> The Clean Development Mechanism (CDM) generates Certified Emission Reductions (CERs) from projects in:</p>
+            <div class="mcq-options">
+              <label class="mcq-option"><input type="radio" name="m9q5" value="incorrect">Annex I countries only</label>
+              <label class="mcq-option"><input type="radio" name="m9q5" value="incorrect">Annex I and Annex II countries</label>
+              <label class="mcq-option"><input type="radio" name="m9q5" value="correct">Non-Annex I (developing) countries</label>
+              <label class="mcq-option"><input type="radio" name="m9q5" value="incorrect">All UNFCCC parties equally</label>
+            </div>
+            <div class="mcq-explanation" data-explanation">CDM = Annex I country invests in emission reduction project in NON-Annex I (developing) country. Generates CERs (Certified Emission Reductions). JI = Annex I ↔ Annex I projects generating ERUs. CDM is the only mechanism involving developing countries."></div>
+            <div class="mcq-answer-key" style="margin-top: 12px; padding: 12px; background: var(--brand-light); border: 1px solid var(--brand); border-radius: var(--radius-md); font-size: 0.85rem; color: var(--brand);"><strong>✓ Correct Answer: </strong>Non-Annex I (developing) countries</div>
+            <div class="mcq-actions"><button class="mcq-btn check">Check</button><button class="mcq-btn reset" disabled>Reset</button></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="anchor-rail" aria-label="On-page navigation">
+      <h4>Module 09</h4>
+      <a href="#climate-science" class="anchor-link">01 Climate Science</a>
+      <a href="#kyoto-mechanisms" class="anchor-link">02 Kyoto Mechanisms</a>
+      <a href="#kyoto-evaluation" class="anchor-link">03 Evaluation & Legacy</a>
+      <a href="#practice-m9" class="anchor-link">🎯 Practice MCQs</a>
+      <h4>Navigation</h4>
+      <a href="index.html" class="anchor-link">← Home</a>
+      <a href="module-8-policy.html" class="anchor-link">← Prev: Module 08</a>
+      <a href="module-10-philosophy-greek.html" class="anchor-link">Next: Module 10 →</a>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>HS 250 — Module 09: Global Warming & Kyoto · <a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

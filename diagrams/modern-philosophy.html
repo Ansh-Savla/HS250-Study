@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Philosophy: Descartes to Heidegger</title>
+<style>
+  :root {
+    --text-primary: #1a1a18;
+    --text-secondary: #5f5e5a;
+    --text-tertiary: #88877f;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f5f0;
+    --bg-tertiary: #eeedeb;
+    --border: rgba(0,0,0,0.15);
+    --border-hover: rgba(0,0,0,0.3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-primary: #e8e6de;
+      --text-secondary: #b4b2a9;
+      --text-tertiary: #888780;
+      --bg-primary: #1a1a18;
+      --bg-secondary: #2c2c2a;
+      --bg-tertiary: #3d3d3a;
+      --border: rgba(255,255,255,0.15);
+      --border-hover: rgba(255,255,255,0.3);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-tertiary); display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; }
+  .card { background: var(--bg-primary); border-radius: 16px; padding: 32px; max-width: 780px; width: 100%; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  h1 { font-size: 18px; font-weight: 500; color: var(--text-primary); margin-bottom: 8px; }
+  .subtitle { font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; }
+  svg { width: 100%; height: auto; }
+
+  .t  { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); }
+  .ts { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; fill: var(--text-secondary); }
+  .th { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; fill: var(--text-primary); font-weight: 500; }
+  .box { fill: var(--bg-secondary); stroke: var(--border); stroke-width: 0.5px; }
+  .arr { stroke: var(--text-secondary); stroke-width: 1.5px; fill: none; }
+  .leader { stroke: var(--text-tertiary); stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
+  .node { cursor: pointer; transition: opacity 0.15s; }
+  .node:hover { opacity: 0.82; }
+
+  .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #E1F5EE; stroke: #0F6E56; }
+  .c-teal > .th, .c-teal > text.th { fill: #085041; }
+  .c-teal > .ts, .c-teal > text.ts { fill: #0F6E56; }
+  .c-teal > .t,  .c-teal > text.t  { fill: #085041; }
+
+  .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #FAEEDA; stroke: #854F0B; }
+  .c-amber > .th, .c-amber > text.th { fill: #633806; }
+  .c-amber > .ts, .c-amber > text.ts { fill: #854F0B; }
+  .c-amber > .t,  .c-amber > text.t  { fill: #633806; }
+
+  .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #FAECE7; stroke: #993C1D; }
+  .c-coral > .th, .c-coral > text.th { fill: #712B13; }
+  .c-coral > .ts, .c-coral > text.ts { fill: #993C1D; }
+  .c-coral > .t,  .c-coral > text.t  { fill: #712B13; }
+
+  .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #FBEAF0; stroke: #993556; }
+  .c-pink > .th, .c-pink > text.th { fill: #72243E; }
+  .c-pink > .ts, .c-pink > text.ts { fill: #993556; }
+  .c-pink > .t,  .c-pink > text.t  { fill: #72243E; }
+
+  .c-purple > rect, .c-purple > circle, .c-purple > ellipse { fill: #EEEDFE; stroke: #534AB7; }
+  .c-purple > .th, .c-purple > text.th { fill: #3C3489; }
+  .c-purple > .ts, .c-purple > text.ts { fill: #534AB7; }
+  .c-purple > .t,  .c-purple > text.t  { fill: #3C3489; }
+
+  @media (prefers-color-scheme: dark) {
+    .c-teal > rect, .c-teal > circle, .c-teal > ellipse { fill: #085041; stroke: #5DCAA5; }
+    .c-teal > .th, .c-teal > text.th { fill: #9FE1CB; }
+    .c-teal > .ts, .c-teal > text.ts { fill: #5DCAA5; }
+
+    .c-amber > rect, .c-amber > circle, .c-amber > ellipse { fill: #633806; stroke: #EF9F27; }
+    .c-amber > .th, .c-amber > text.th { fill: #FAC775; }
+    .c-amber > .ts, .c-amber > text.ts { fill: #EF9F27; }
+
+    .c-coral > rect, .c-coral > circle, .c-coral > ellipse { fill: #712B13; stroke: #F0997B; }
+    .c-coral > .th, .c-coral > text.th { fill: #F5C4B3; }
+    .c-coral > .ts, .c-coral > text.ts { fill: #F0997B; }
+
+    .c-pink > rect, .c-pink > circle, .c-pink > ellipse { fill: #72243E; stroke: #ED93B1; }
+    .c-pink > .th, .c-pink > text.th { fill: #F4C0D1; }
+    .c-pink > .ts, .c-pink > text.ts { fill: #ED93B1; }
+
+    .c-purple > rect, .c-purple > circle, .c-purple > ellipse { fill: #3C3489; stroke: #AFA9EC; }
+    .c-purple > .th, .c-purple > text.th { fill: #CECBF6; }
+    .c-purple > .ts, .c-purple > text.ts { fill: #AFA9EC; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Modern Philosophy: Descartes → Kant → Heidegger</h1>
+  <p class="subtitle">The epistemological turn and its anti-ecological consequences</p>
+  <svg width="100%" viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </marker>
+    </defs>
+
+    <!-- Medieval → Modern -->
+    <text class="th" x="340" y="40" text-anchor="middle">Medieval → Modern Transition</text>
+    <g class="node c-teal">
+      <rect x="40" y="60" width="280" height="80" rx="8" stroke-width="0.5"/>
+      <text class="th" x="180" y="85" text-anchor="middle" dominant-baseline="central">Medieval</text>
+      <text class="ts" x="180" y="105" text-anchor="middle" dominant-baseline="central">Thinking symbolically</text>
+      <text class="ts" x="180" y="120" text-anchor="middle" dominant-baseline="central">Aristotelian, Christian</text>
+      <text class="ts" x="180" y="135" text-anchor="middle" dominant-baseline="central">Nature = symbolic order</text>
+    </g>
+
+    <g class="node c-amber">
+      <rect x="360" y="60" width="280" height="80" rx="8" stroke-width="0.5"/>
+      <text class="th" x="500" y="85" text-anchor="middle" dominant-baseline="central">Modern</text>
+      <text class="ts" x="500" y="105" text-anchor="middle" dominant-baseline="central">Thinking representationally</text>
+      <text class="ts" x="500" y="120" text-anchor="middle" dominant-baseline="central">Nature = image of human mind</text>
+      <text class="ts" x="500" y="135" text-anchor="middle" dominant-baseline="central">Paintings become realistic</text>
+    </g>
+
+    <!-- Descartes -->
+    <text class="th" x="340" y="180" text-anchor="middle">DESCARTES: Pivotal Modern Figure</text>
+    <g class="node c-coral">
+      <rect x="40" y="200" width="280" height="180" rx="8" stroke-width="0.5"/>
+      <text class="th" x="180" y="225" text-anchor="middle" dominant-baseline="central">Father of Modern Philosophy</text>
+      <text class="ts" x="180" y="250" text-anchor="middle" dominant-baseline="central">• Rationalist: reason alone (like Plato)</text>
+      <text class="ts" x="180" y="270" text-anchor="middle" dominant-baseline="central">• Method of doubt → "I think therefore I am"</text>
+      <text class="ts" x="180" y="290" text-anchor="middle" dominant-baseline="central">• Two substances: Mind (unextended) + Matter (extended)</text>
+      <text class="ts" x="180" y="310" text-anchor="middle" dominant-baseline="central">• Cannot interact → work of God</text>
+      <text class="ts" x="180" y="330" text-anchor="middle" dominant-baseline="central">• Primary (objective) vs Secondary (subjective) qualities</text>
+    </g>
+
+    <g class="node c-pink">
+      <rect x="360" y="200" width="280" height="180" rx="8" stroke-width="0.5"/>
+      <text class="th" x="500" y="225" text-anchor="middle" dominant-baseline="central">Anti-Ecological Consequences</text>
+      <text class="ts" x="500" y="250" text-anchor="middle" dominant-baseline="central">• God responsible for all change</text>
+      <text class="ts" x="500" y="270" text-anchor="middle" dominant-baseline="central">• No human nature-preservation needed</text>
+      <text class="ts" x="500" y="290" text-anchor="middle" dominant-baseline="central">• Epistemological turn: not "does world exist?"</text>
+      <text class="ts" x="500" y="310" text-anchor="middle" dominant-baseline="central">  but "can we know it?"</text>
+      <text class="ts" x="500" y="330" text-anchor="middle" dominant-baseline="central">• Problem of mental representation</text>
+      <text class="ts" x="500" y="350" text-anchor="middle" dominant-baseline="central">• Scepticism: do ideas match reality?</text>
+    </g>
+
+    <!-- Post-Descartes -->
+    <text class="th" x="340" y="410" text-anchor="middle">Post-Cartesian Legacy</text>
+    <g class="c-teal">
+      <text class="ts" x="80" y="435" dominant-baseline="central">Berkeley: primary/secondary qualities = subjective; only ideas exist</text>
+      <text class="ts" x="80" y="455" dominant-baseline="central">Hume: trust sensations/impressions; causality = habit</text>
+      <text class="ts" x="80" y="475" dominant-baseline="central">Kant: external world = unknowable noumenon</text>
+      <text class="ts" x="80" y="495" dominant-baseline="central">19th C idealism: existence is mental</text>
+    </g>
+
+    <!-- Science & Environmental Thought -->
+    <text class="th" x="340" y="525" text-anchor="middle">Science & Environmental Thought (Hargrove)</text>
+    <g class="c-coral">
+      <text class="ts" x="80" y="550" dominant-baseline="central">• Modern science = Cartesian assumptions</text>
+      <text class="ts" x="80" y="570" dominant-baseline="central">• Mathematical/geometrical method > observation</text>
+      <text class="ts" x="80" y="590" dominant-baseline="central">• Reductionist: complex → simple parts</text>
+      <text class="ts" x="80" y="610" dominant-baseline="central">• Time ignored; indestructibility of matter</text>
+      <text class="ts" x="80" y="630" dominant-baseline="central">• Natural history sciences (geology, biology, ecology) treated with contempt</text>
+    </g>
+
+  </svg>
+</div>
+</body>
+</html>
